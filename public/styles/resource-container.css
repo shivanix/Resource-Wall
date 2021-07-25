@@ -1,9 +1,4 @@
 .category {
-  justify-content: center;
-  width: 385px;
-  height: 20px;
-  left: 44px;
-  top: 853px;
   text-align: center;
   border: solid;
   border-radius: 15px;
@@ -13,8 +8,6 @@
 .read-more {
   width: 385px;
   height: 49px;
-  left: 43px;
-  top: 925px;
   margin-top: 5px;
   border-radius: 15px;
   border-color: black;
@@ -38,49 +31,25 @@
 
 .resource-summary {
   justify-content: center;
-  width: 385px;
-  /* height: 68px; */
-  left: 44px;
-  top: 766px;
-
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
+  font-size: .95em;
+  line-height: 1.35em;
   text-align: justify;
-
   color: #000000;
 }
 
 .resource-thumbnail {
   width: 385px;
   height: 300px;
-  left: 44px;
-  top: 398px;
-
-  background: #FFFFFF;
   border: 3px solid #000000;
   border-radius: 25px;
 }
 
 .resource-title {
   justify-content: center;
-  width: 385px;
-  /* height: 68px; */
-  left: 44px;
-  top: 698px;
   font-family: Noto Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  line-height: 34px;
-  display: flex;
-  align-items: center;
+  font-size: 1.56em;
+  line-height: 1.35em;
   text-align: center;
-
   color: #000000;
 }
 
@@ -88,18 +57,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 385px;
-  height: 20px;
-  left: 43px;
-  top: 882px;
   margin-top: 5px;
 }
 
 .tag {
   width: 120px;
-  height: auto;
-  left: 43px;
-  top: 882px;
   text-align: center;
   border: solid;
   border-radius: 15px;
