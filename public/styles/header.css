@@ -1,0 +1,60 @@
+*{
+
+  margin: 0;
+  padding: 0;
+}
+a, button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+header{
+  background-color: #E7E7DE;
+  border: 5px solid red;
+  display: flex;
+  align-items: center;
+  color: #003638;
+  justify-content: flex-end;
+ padding: 30px 5%;
+  /* width: 1440px;
+height: 160px; */
+}
+
+.logo{
+  margin-right: auto;
+  cursor: pointer;
+  font-size: 30px;
+
+}
+.logo span:hover{
+  color: #00ADB5;
+  opacity: 0.5;
+}
+
+
+button{
+  padding: 9px 25px;
+  border: none;
+  border-radius: 50px;
+  background-color:#00ADB5 ;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover{
+  color:black;
+  transition-duration: 0.4s;
+}
+.greeting{
+  align-self: flex-end;
+  font-size: 20px;
+height: 30px;
+}
+.right-block{
+  display: flex;
+ flex-direction: column;
+
+}
