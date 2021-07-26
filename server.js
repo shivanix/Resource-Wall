@@ -47,7 +47,7 @@ app.use("/api/widgets", widgetsRoutes(db));
 /*-------- When call to /api/-- is made, the connected method will run -----*/
 app.use("/api/create_resource", createResourceRoutes(db));
 app.use("/api/read_more", readMoreRoutes(db));
-app.use("/api/home_page", homePageRoutes(db));
+app.use("/home", homePageRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
 
