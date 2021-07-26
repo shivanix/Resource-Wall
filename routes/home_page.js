@@ -3,7 +3,7 @@ const router  = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
-    res.render("create_resources");
+    res.render("home_page");
       })
 
   return router;
