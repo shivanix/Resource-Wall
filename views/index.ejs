@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home Page</title>
+    <title>Welcome to Resource-Wall</title>
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/landing.css" type="text/css" />
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
   </head>
 
   <body>
-    <h1>Hello World!</h1>
+    <nav id ="nav-bar">
+      <div class="left-side">
+        <i class="logo"></i>
+        <span class="app-name">Resource-Wall</span>
+      </div>
+      <div class="right-side-buttons">
+        <a class="login-button" href="/login" role="button">Login</a>
+        <a class="signup-button" href="/register" role="button">Sign up</a>
+      </div>
+    </nav>
+    <main id ="call-to-action">
+      <h1 class="message">Start Saving Your Links and Resources</h2>
+      <a class="secondary-login" href="/login" role="button"></a>
+    </main>
   </body>
 </html>
