@@ -5,164 +5,158 @@ html {
   box-sizing: inherit;
 }
 
-#nav-bar {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-.logo {
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-
-  width: 80px;
-  height: 80px;
-  left: 41px;
-  top: 41px;
-  border: 2px cyan solid;
-}
-
-.app-name {
-  position: absolute;
+body {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-
-  width: 303px;
-  height: 53px;
-  margin-right:auto;
-  left: 147px;
-  top: 56px;
-
-  font-family: Futura;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 53px;
-  display: flex;
-  align-items: center;
-
-  color: #000000;
-}
-
-.right-side-buttons {
-  display: inline-block;
-  padding: 0px, 20px;
-}
-
-.login-button {
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-
-  width: 135px;
-  height: 55px;
-  left: 1110px;
-  top: 56px;
-
-  cursor: pointer;
-  display: flex;
-  padding:0.3em 1.2em;
-  margin:0 0.3em 0.3em 0;
-  border-radius:2em;
-  box-sizing: border-box;
-  text-decoration:none;
-  font-family:Futura;
-  font-size: 20px;
-  color:#FFFFFF;
-  background-color: #000000;
-  text-align: center;
   justify-content: center;
-  transition: all 0.2s;
-}
 
-.login-button:hover {
-  color: #000000;
-  border-radius:2em;
-  border: 4px solid #000000;
-  border-color: #000000;
-  background-color: transparent;
-  transition: background-color ease 550ms;
-}
+  #nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 4em 0 4em;
 
-.signup-button {
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
+    .left-side {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
 
-  width: 135px;
-  height: 55px;
-  left: 1265px;
-  top: 56px;
+    .logo {
+      width: 60px;
+      height: 60px;
+      /* Logo size will change later*/
+      border: 2px yellowgreen solid;
+      margin-right: 1em;
+    }
 
-  cursor: pointer;
-  display: flex;
-  padding:0.3em 1.2em;
-  margin:0 0.3em 0.3em 0;
-  border-radius:2em;
-  box-sizing: border-box;
-  text-decoration:none;
-  font-family:Futura;
-  font-size: 20px;
-  color:#FFFFFF;
-  background-color: #000000;
-  text-align: center;
-  justify-content: center;
-  transition: all 0.2s;
-}
+    .app-name {
+      font-family: Futura;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 53px;
 
-.signup-button:hover {
-  color: #000000;
-  border-radius:2em;
-  border: 4px solid #000000;
-  border-color: #000000;
-  background-color: transparent;
-  transition: background-color ease 550ms;
-}
+      color: #000000;
+    }
 
-#call-to-action {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
 
-.message {
-  position: absolute;
-  width: 865px;
-  height: 212px;
-  left: 288px;
-  top: 45%;
+    .login-button {
+      cursor: pointer;
+      padding:0.3em 1.2em;
+      margin:0 0.3em 0.3em 0;
+      border-radius:2em;
+      border: 4px solid #000000;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-family:Futura;
+      font-size: 1em;
+      color:#FFFFFF;
+      background-color: #000000;
+      text-align: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
 
-  font-family: Futura;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 80px;
-  line-height: 106px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+    .login-button:hover {
+      color: #000000;
+      border-radius:2em;
+      border: 4px solid #000000;
+      border-color: #000000;
+      background-color: transparent;
+      transition: background-color ease 575ms;
+    }
 
-  color: #000000;
-}
+    .signup-button {
+      cursor: pointer;
+      padding:0.3em 1.2em;
+      margin:0 0.3em 0.3em 0;
+      border-radius:2em;
+      border: 4px solid #000000;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-family:Futura;
+      font-size: 1em;
+      color:#FFFFFF;
+      background-color: #000000;
+      text-align: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
 
-.secondary-login {
-  position: absolute;
+    .signup-button:hover {
+      color: #000000;
+      border-radius:2em;
+      border: 4px solid #000000;
+      border-color: #000000;
+      background-color: transparent;
+      transition: background-color ease 575ms;
+    }
+  }
 
-  width: 61.25px;
-  height: 61.25px;
-  left: 689px;
-  top: 78%;
-  border: 2px cyan solid;
+  .call-to-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .thumbnails {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10%;
+      padding-bottom: 1.5em;
+
+      .image-1 {
+        max-width: 20em;
+        max-height: 20em;
+        cursor: pointer;
+        object-fit: cover;
+        margin-right: 2em;
+      }
+
+      .image-2 {
+        max-width: 20em;
+        max-height: 20em;
+        cursor: pointer;
+        object-fit: cover;
+      }
+
+      .image-3 {
+        max-width: 20em;
+        max-height: 20em;
+        cursor: pointer;
+        margin-left: 2em;
+        object-fit: cover;
+      }
+    }
+
+    h1 {
+      font-family: Futura;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 4.5em;
+      line-height: 1.2em;
+      align-items: center;
+      text-align: center;
+      margin-top: .25em;
+      margin-bottom: .25em;
+
+      color: #000000;
+    }
+
+    .secondary-login {
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      /* Logo size will change later*/
+      border: 2px yellowgreen solid;
+    }
+  }
 }
