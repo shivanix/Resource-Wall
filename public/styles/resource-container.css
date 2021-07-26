@@ -1,8 +1,17 @@
 .category {
-  text-align: center;
   border: solid;
   border-radius: 15px;
   margin-top: 5px;
+  text-align: center;
+  font-size: .66em;
+}
+
+#rc1 {
+  padding-right: 5px;
+}
+
+#rc2 {
+  padding-left: 5px;
 }
 
 .read-more {
@@ -17,9 +26,9 @@
 .resource-container {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  /* position: absolute; */
   width: 386px;
-  height: 476px;
+  height: 495px;
   left: 43px;
   font-family: Noto Sans;
 
@@ -31,7 +40,7 @@
 
 .resource-summary {
   justify-content: center;
-  font-size: .95em;
+  font-size: .66em;
   line-height: 1.35em;
   text-align: justify;
   color: #000000;
@@ -47,7 +56,7 @@
 .resource-title {
   justify-content: center;
   font-family: Noto Sans;
-  font-size: 1.56em;
+  font-size: 1em;
   line-height: 1.35em;
   text-align: center;
   color: #000000;
@@ -61,8 +70,9 @@
 }
 
 .tag {
-  width: 120px;
-  text-align: center;
   border: solid;
   border-radius: 15px;
+  font-size: .66em;
+  text-align: center;
+  width: 120px;
 }
