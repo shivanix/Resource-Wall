@@ -50,6 +50,17 @@ app.use("/api/read_more", readMoreRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
 
+/* GET Route for /login
+*/
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+/* GET Route for /register
+*/
+app.get("/register", (req, res) => {
+  res.render("register");
+});
 
 // Home page
 // Warning: avoid creating more routes in this file!

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login to Resource-Wall</title>
+
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/login.css" type="text/css" />
+
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <div class="call-to-action">Login to Start Resourcing</div>
+    <div class="login-container">
+      <img class="logo"></div>
+      <h1>Welcome to Resource-Wall</h1>
+      <form class="form-inline justify-content-center" action="/login" method="POST">
+        <div class="grid">
+          <div class ="email">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+          </div>
+          <div class ="password" >
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+          </div>
+          <div class="login-button">
+            <button type="submit" class="btn btn-primary my-2 my-sm-0" >Log in</button>
+          </div>
+          <a href="/register">Not a member yet? Sign up</div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

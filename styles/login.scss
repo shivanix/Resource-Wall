@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-to-action {
+  position: absolute;
+  width: 581px;
+  height: 212px;
+  left: 170px;
+  top: 45%;
+
+  font-family: Futura;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 106px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  color: #000000;
+}
+
+.login-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 423px;
+  height: 600px;
+  left: 846px;
+  top: 10%;
+
+  background: #F3F3F3;
+  border-radius: 25px;
+}
+
+.logo {
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  width: 60px;
+  height: 60px;
+
+  top: 20%;
+  border: 2px cyan solid;
+}
+
+h1 {
+  position: absolute;
+  width: 292px;
+  height: 32px;
+  left: 912px;
+  top: 35%;
+
+  font-family: Futura;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+
+  color: #000000;
+}
+
+.grid {
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.form-inline {
+  position: absolute;
+  width: 283px;
+  height: 201px;
+  left: 916px;
+  top: 482px;
+}
