@@ -40,8 +40,20 @@ const widgetsRoutes = require("./routes/widgets");
 // Note: Feel free to replace the example routes below with your own
 app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
+
 // Note: mount other resources here, using the same pattern above
 
+/* GET Route for /login
+*/
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+/* GET Route for /register
+*/
+app.get("/register", (req, res) => {
+  res.render("register");
+});
 
 // Home page
 // Warning: avoid creating more routes in this file!
