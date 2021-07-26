@@ -36,37 +36,38 @@ app.use(express.static("public"));
 const usersRoutes = require("./routes/users");
 const widgetsRoutes = require("./routes/widgets");
 
-const createResourceRoutes = require("./routes/create_resource");
-const readMoreRoutes = require("./routes/read_more");
-const homePageRoutes = require("./routes/home_page");
+const createResourceRoutes = require("./routes/create");
+const resourceRoutes = require("./routes/resource");
+const homeRoutes = require("./routes/home");
+
+const loginRoutes = require("./routes/login");
+const registerRoutes = require("./routes/register");
+
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 
 /*-------- When call to /api/-- is made, the connected method will run -----*/
-app.use("/api/create_resource", createResourceRoutes(db));
-app.use("/api/read_more", readMoreRoutes(db));
-app.use("/home", homePageRoutes(db));
+app.use("/create", createResourceRoutes(db));
+app.use("/resource", resourceRoutes(db));
+// /dashboard
+// /users/:id/resources -- if I want to see the resources of a specific user
+app.use("/home", homeRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
 
 /* GET Route for /login
 */
-app.get("/login", (req, res) => {
-  res.render("login");
-});
+app.use("/login", loginRoutes(db));
 
-/* GET Route for /register
+/* GET Route for /register aka sign up page
 */
-app.get("/register", (req, res) => {
-  res.render("register");
-});
+app.use("/register", registerRoutes(db));
 
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
-
 
 app.get("/", (req, res) => {
   res.render("index");
