@@ -36,7 +36,7 @@ app.use(express.static("public"));
 const usersRoutes = require("./routes/users");
 const widgetsRoutes = require("./routes/widgets");
 
-const createResourceRoutes = require("./routes/create-resource");
+const createResourceRoutes = require("./routes/create_resource");
 const readMoreRoutes = require("./routes/read_more");
 
 // Mount all resource routes
@@ -45,7 +45,7 @@ app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 
 /*-------- When call to /api/-- is made, the connected method will run -----*/
-app.use("/api/create-resource", createResourceRoutes(db));
+app.use("/api/create_resource", createResourceRoutes(db));
 app.use("/api/read_more", readMoreRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
