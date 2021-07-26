@@ -1,0 +1,168 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#nav-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.logo {
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  width: 80px;
+  height: 80px;
+  left: 41px;
+  top: 41px;
+  border: 2px cyan solid;
+}
+
+.app-name {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  width: 303px;
+  height: 53px;
+  margin-right:auto;
+  left: 147px;
+  top: 56px;
+
+  font-family: Futura;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 53px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.right-side-buttons {
+  display: inline-block;
+  padding: 0px, 20px;
+}
+
+.login-button {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  width: 135px;
+  height: 55px;
+  left: 1110px;
+  top: 56px;
+
+  cursor: pointer;
+  display: flex;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:Futura;
+  font-size: 20px;
+  color:#FFFFFF;
+  background-color: #000000;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.login-button:hover {
+  color: #000000;
+  border-radius:2em;
+  border: 4px solid #000000;
+  border-color: #000000;
+  background-color: transparent;
+  transition: background-color ease 550ms;
+}
+
+.signup-button {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  width: 135px;
+  height: 55px;
+  left: 1265px;
+  top: 56px;
+
+  cursor: pointer;
+  display: flex;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:Futura;
+  font-size: 20px;
+  color:#FFFFFF;
+  background-color: #000000;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.signup-button:hover {
+  color: #000000;
+  border-radius:2em;
+  border: 4px solid #000000;
+  border-color: #000000;
+  background-color: transparent;
+  transition: background-color ease 550ms;
+}
+
+#call-to-action {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.message {
+  position: absolute;
+  width: 865px;
+  height: 212px;
+  left: 288px;
+  top: 45%;
+
+  font-family: Futura;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 106px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+.secondary-login {
+  position: absolute;
+
+  width: 61.25px;
+  height: 61.25px;
+  left: 689px;
+  top: 78%;
+  border: 2px cyan solid;
+}
