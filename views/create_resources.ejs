@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Create a Resource</title>
+  <script src="https://kit.fontawesome.com/b5e8de9747.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/styles/create_resource.css">
+
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+</head>
+
+<body>
+  <%- include('partials/header') %>
+
+  <div class="main-block">
+    <form action="/">
+      <h1>Create</h1>
+      <div class="info">
+        <input class="title" type="text" name="name" placeholder="Enter title..">
+        <input class="summary" type="text" name="name" placeholder="Enter your summary here...">
+        <div>
+          <p>Describe</p>
+
+          <textarea name="name" rows="8" cols="50" placeholder="Describe"></textarea>
+        </div>
+        <input type="text" name="name" placeholder="Enter Tags">
+        <input type="text" name="name" placeholder="Enter link to source">
+        <input type="text" name="name" placeholder="Enter link to Thumbnail Picture">
+
+      </div>
+
+      <button type="submit" href="/">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
