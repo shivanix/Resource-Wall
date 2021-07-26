@@ -8,13 +8,13 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 25%;
+  margin-top: 15%;
 }
 
 .message {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: flex-end;
   margin-right: .25em;
 
   font-family: Futura;
@@ -24,8 +24,6 @@ body {
 
   line-height: 1.10em;
   width: 50%;
-
-  border: fuchsia 2px solid;
 }
 
 .login-container {
@@ -33,7 +31,10 @@ body {
   flex-direction: column;
   align-items: center;
   margin-left: .25em;
-  border: cyan 2px solid;
+  padding: 7em 1em 7em 1em;
+
+  background: #F3F3F3;
+  border-radius: 25px;
 }
 
 .logo {
@@ -42,22 +43,41 @@ body {
   width: 60px;
   height: 60px;
   /* Logo size will change later*/
-
   border: 2px yellowgreen solid;
 }
 
 h1 {
   font-family: Futura;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 100;
   color: #000000;
 }
 
 .form-inline {
   font-family: Futura;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 100;
   color: #000000;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 .25em 0;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 .25em 0;
 }
 
 .login-button {
@@ -66,7 +86,6 @@ h1 {
 
   cursor: pointer;
   padding:0.3em 1.2em;
-  margin:0 0.3em 0.3em 0;
   border-radius:2em;
   border: 4px solid #000000;
   box-sizing: border-box;
@@ -88,3 +107,13 @@ h1 {
   background-color: transparent;
   transition: background-color ease 550ms;
 }
+
+a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: .25em 0 0 0;
+  color: #434343;
+  font-size: .75em;
+}
+
