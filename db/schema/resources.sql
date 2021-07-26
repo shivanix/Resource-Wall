@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS resources CASCADE;
+
+CREATE TABLE resources (
+  id SERIAL PRIMARY KEY NOT NULL,
+  owner_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  created_at TIMESTAMP NOT NULL,
+  resource_url VARCHAR(255) NOT NULL,
+  thumbnail_photo_url VARCHAR(255) NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  summary VARCHAR(255) NOT NULL,
+  description TEXT NOT NULL,
+  category VARCHAR(255) NOT NULL,
+  tag INTEGER REFERENCES tags(id) ON DELETE CASCADE
+)
