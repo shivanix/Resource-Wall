@@ -1,0 +1,18 @@
+.liked-pair {
+  display: flex;
+}
+.liked-resources-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+}
+
+.my-resources-container {
+  padding-left: 30px;
+}
+
+.resource-row {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+}
