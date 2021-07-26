@@ -36,18 +36,28 @@ app.use(express.static("public"));
 const usersRoutes = require("./routes/users");
 const widgetsRoutes = require("./routes/widgets");
 
+const createResourceRoutes = require("./routes/create-resource");
+const readMoreRoutes = require("./routes/read_more");
+
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
+
+/*-------- When call to /api/-- is made, the connected method will run -----*/
+app.use("/api/create-resource", createResourceRoutes(db));
+app.use("/api/read_more", readMoreRoutes(db));
+
 // Note: mount other resources here, using the same pattern above
 
 
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
+
+/*--- Directing to home page for now-- landing page wil replace this----*/
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("home_page");
 });
 
 app.get('/my-resources', (req, res) => {
