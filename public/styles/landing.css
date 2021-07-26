@@ -15,7 +15,7 @@ html {
 }
 
 .logo {
-  position: fixed;
+  position: absolute;
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -28,7 +28,7 @@ html {
 }
 
 .app-name {
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -54,7 +54,7 @@ html {
 }
 
 .login-button {
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -89,7 +89,7 @@ html {
 }
 
 .signup-button {
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -132,7 +132,7 @@ html {
 }
 
 .message {
-  position: fixed;
+  position: absolute;
   width: 865px;
   height: 212px;
   left: 288px;
@@ -149,7 +149,7 @@ html {
 }
 
 .secondary-login {
-  position: fixed;
+  position: absolute;
   width: 61.25px;
   height: 61.25px;
   left: 689px;
