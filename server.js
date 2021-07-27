@@ -52,7 +52,7 @@ const registerRoutes = require("./routes/register");
 const loginRoutes = require("./routes/login");
 const logoutRoutes = require("./routes/logout");
 
-const myResourcesRoutes = require("./routes/my-resources");
+
 const resourcesRoutes = require("./routes/resources-router");
 
 // Mount all resource routes
