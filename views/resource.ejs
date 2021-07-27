@@ -14,40 +14,16 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/styles/resource.css" type="text/css" />
+
+    <!-- Script handler -->
+    <script src="scripts/resource.js"></script>
   </head>
   <body>
     <%- include('partials/header') %>
     <main id="all-contents">
-    <section id="expanded-resource">
-      <div class="resource-header">
-        <div class="title-and-category">
-          <h3>Category</h3>
-          <h1>Title Goes Here</h1>
-        </div>
-        <div class="rating">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-        </div>
-      </div>
-      <div class="contents">
-        <img class="image" src="/images/cupcake.png"></i>
-        <div class="description-container">
-            Biscuit sweet roll candy muffin marzipan sugar plum toffee dragée. Gummi bears dragée jelly powder gingerbread pudding pudding bear claw. Toffee brownie croissant. Cookie gummies chupa chups muffin cake halvah topping cheesecake biscuit.
-        </div>
-        <div class="more-containers">
-          <div class="left-side">
-            <div class="tags">Tags Go Here</div>
-            <a href="/" class="external-link">Visit Source</a>
-          </div>
-          <div class="like-button">
-            <span class="fas fa-heart"></i>
-          </div>
-        </div>
-      </div>
-    </section>
+
+    <div id="expandedResource"></div>
+
     <section id="comments-section">
       <div class="comment-form">
         <h3>Leave a Comment</h3>
