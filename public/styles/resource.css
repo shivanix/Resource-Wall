@@ -1,0 +1,175 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#all-contents {
+  display: flex;
+  flex-direction: row;
+  font-family: Noto Sans;
+}
+
+#all-contents #expanded-resource {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em 0 4em;
+  max-width: 65%;
+}
+
+#all-contents #expanded-resource .resource-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#all-contents #expanded-resource .resource-header .title-and-category {
+  line-height: 1em;
+  margin-bottom: .5em;
+}
+
+#all-contents #expanded-resource .resource-header .title-and-category h3 {
+  text-transform: uppercase;
+}
+
+#all-contents #expanded-resource .resource-header .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  padding-bottom: 1em;
+}
+
+#all-contents #expanded-resource .contents {
+  display: flex;
+  flex-direction: column;
+}
+
+#all-contents #expanded-resource .contents .image {
+  max-width: 100%;
+  border-radius: 1.5em;
+  margin-bottom: 2em;
+}
+
+#all-contents #expanded-resource .contents .description-container {
+  border-radius: 1.5em;
+  padding: 1.25em;
+  line-height: 1.55em;
+  border: 3px solid #000000;
+}
+
+#all-contents #expanded-resource .contents .more-containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: .5em;
+}
+
+#all-contents #expanded-resource .contents .more-containers .left-side {
+  display: flex;
+  flex-direction: column;
+  padding-right: .5em;
+  width: 90%;
+}
+
+#all-contents #expanded-resource .contents .more-containers .left-side .tags {
+  border-radius: 1.5em;
+  line-height: 1.55em;
+  text-transform: uppercase;
+  text-align: center;
+  border: 3px solid #000000;
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+#all-contents #expanded-resource .contents .more-containers .left-side .external-link {
+  border-radius: 1.5em;
+  line-height: 1.55em;
+  text-transform: uppercase;
+  text-align: center;
+  border: 3px solid #000000;
+  color: #FFFFFF;
+  background-color: #000000;
+  margin-top: .5em;
+}
+
+#all-contents #expanded-resource .contents .more-containers .like-button {
+  display: flex;
+  width: 10%;
+  border: hotpink 2px solid;
+}
+
+#all-contents #expanded-resource .contents .more-containers .like-button .fas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#all-contents #comments-section {
+  display: flex;
+  flex-direction: column;
+  padding: 9em 4em 0 1em;
+}
+
+#all-contents #comments-section .comment-form h3 {
+  text-transform: uppercase;
+  margin-bottom: .5em;
+}
+
+#all-contents #comments-section .comment-form form textarea {
+  resize: none;
+  width: 100%;
+  min-height: 8em;
+  border-radius: 1.5em;
+  line-height: 1.55em;
+  border: 3px solid #000000;
+  padding: .5em;
+}
+
+#all-contents #comments-section .comment-form form .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#all-contents #comments-section .comment-form form .buttons .submit-comment {
+  cursor: pointer;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #000000;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+#all-contents .comments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+#all-contents .comments .comments-container .comment {
+  width: 100%;
+  font-size: 1em;
+  border-radius: 1.25em;
+  line-height: 1.55em;
+  border: 3px solid #000000;
+  padding: .5em;
+}
+
+#all-contents .comments .comments-container .username {
+  padding: .25em 0 0 .5em;
+  font-size: .85em;
+}
+
+#all-contents .comments .comments-container .timestamp {
+  padding: 0 0 2em .5em;
+  font-size: .80em;
+  color: #434343;
+}
