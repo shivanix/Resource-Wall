@@ -26,6 +26,7 @@ header .left-side .app-name {
   font-weight: bold;
   font-size: 40px;
   line-height: 53px;
+  text-decoration: none;
   color: #000000;
 }
 
@@ -48,6 +49,7 @@ header .nav-links h2 {
 
 header .nav-links h2 a {
   color: #3f3f3f;
+  text-decoration: none;
 }
 
 header .nav-links .bottom-links {
