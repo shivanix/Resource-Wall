@@ -10,5 +10,8 @@ CREATE TABLE resources (
   summary VARCHAR(255) NOT NULL,
   description TEXT NOT NULL,
   category VARCHAR(255) NOT NULL,
-  tag INTEGER REFERENCES tags(id) ON DELETE CASCADE
-)
+  -- tag_id INTEGER REFERENCES tags(id) ON DELETE CASCADE
+  tag_1 VARCHAR(50),
+  tag_2 VARCHAR(50),
+  tag_3 VARCHAR(50)
+);
