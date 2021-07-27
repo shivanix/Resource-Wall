@@ -1,60 +1,110 @@
-/* *{
-
-  margin: 0;
-  padding: 0;
-} */
-a, button {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-header{
-  background-color: #E7E7DE;
-  border: 5px solid red;
+header {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  color: #003638;
-  justify-content: flex-end;
- padding: 30px 5%;
-  /* width: 1440px;
-height: 160px; */
+  justify-content: space-between;
+  padding: 0 4em 0 4em;
+  background: #f2f2f2;
+  height: 10em;
 }
 
-.logo{
-  margin-right: auto;
-  cursor: pointer;
-  font-size: 30px;
-
-}
-.logo span:hover{
-  color: #00ADB5;
-  opacity: 0.5;
-}
-
-
-button{
-  padding: 9px 25px;
-  border: none;
-  border-radius: 50px;
-  background-color:#00ADB5 ;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover{
-  color:black;
-  transition-duration: 0.4s;
-}
-.greeting{
-  align-self: flex-end;
-  font-size: 20px;
-height: 30px;
-}
-.right-block{
+header .left-side {
   display: flex;
- flex-direction: column;
+}
 
+header .left-side .fas {
+  width: 60px;
+  height: 60px;
+  /* Logo size will change later*/
+  border: 2px yellowgreen solid;
+  margin-right: 1em;
+}
+
+header .left-side .app-name {
+  font-family: Futura;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 53px;
+  color: #000000;
+}
+
+header .nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: auto;
+}
+
+header .nav-links h2 {
+  font-family: Futura;
+  font-style: normal;
+  font-size: 1.5em;
+  font-weight: 100;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: .25em;
+}
+
+header .nav-links h2 a {
+  color: #3f3f3f;
+}
+
+header .nav-links .bottom-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-family: Futura;
+  font-size: 1.25em;
+  color: #000000;
+}
+
+header .nav-links .bottom-links .create {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #000000;
+  text-align: center;
+  justify-content: center;
+  margin: 0 1em 0 1em;
+  transition: all 0.2s;
+}
+
+header .nav-links .bottom-links .my-resources {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #000000;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+header .nav-links .bottom-links .logout {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #000000;
+  text-align: center;
+  margin: 0 0 0 1em;
+  justify-content: center;
+  transition: all 0.2s;
 }

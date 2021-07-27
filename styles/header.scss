@@ -1,0 +1,125 @@
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4em 0 4em;
+  background: #f2f2f2;
+  height: 10em;
+
+  .left-side {
+    display: flex;
+
+    .fas {
+      width: 60px;
+      height: 60px;
+      /* Logo size will change later*/
+      border: 2px yellowgreen solid;
+      margin-right: 1em;
+    }
+
+    .app-name {
+      font-family: Futura;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 53px;
+
+      color: #000000;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    width: auto;
+
+    h2 {
+      font-family: Futura;
+      font-style: normal;
+      font-size: 1.5em;
+      font-weight: 100;
+      color: #000000;
+      margin-top:0;
+      margin-bottom: .25em;
+
+      a {
+        color: #3f3f3f;
+      }
+    }
+
+    .bottom-links {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+      font-family: Futura;
+      font-size: 1.25em;
+
+
+      color: #000000;
+
+      .create {
+        display: flex;
+        flex-direction: column;
+
+        cursor: pointer;
+        padding:0.3em 1.2em;
+        border-radius:2em;
+        border: 4px solid #000000;
+        box-sizing: border-box;
+        text-decoration:none;
+
+        color:#FFFFFF;
+        background-color: #000000;
+
+        text-align: center;
+        justify-content: center;
+        margin: 0 1em 0 1em;
+        transition: all 0.2s;
+      }
+
+      .my-resources {
+        display: flex;
+        flex-direction: column;
+
+        cursor: pointer;
+        padding:0.3em 1.2em;
+        border-radius:2em;
+        border: 4px solid #000000;
+        box-sizing: border-box;
+        text-decoration:none;
+
+        color:#FFFFFF;
+        background-color: #000000;
+
+        text-align: center;
+        justify-content: center;
+        transition: all 0.2s;
+      }
+
+      .logout{
+        display: flex;
+        flex-direction: column;
+
+        cursor: pointer;
+        padding:0.3em 1.2em;
+        border-radius:2em;
+        border: 4px solid #000000;
+        box-sizing: border-box;
+        text-decoration:none;
+
+        color:#FFFFFF;
+        background-color: #000000;
+
+        text-align: center;
+        margin: 0 0 0 1em;
+        justify-content: center;
+        transition: all 0.2s;
+      }
+
+    }
+  }
+}
