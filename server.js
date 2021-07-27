@@ -82,9 +82,6 @@ app.use("/login", loginRoutes(db));
 /* Route for /logout */
 app.use("/logout", logoutRoutes(db));
 
-/* Route for /my-resources */
-app.use("/my-resources", myResourcesRoutes(db));
-
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
