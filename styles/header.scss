@@ -24,6 +24,7 @@ header{
       font-weight: bold;
       font-size: 40px;
       line-height: 53px;
+      text-decoration: none;
 
       color: #000000;
     }
@@ -42,11 +43,13 @@ header{
       font-size: 1.5em;
       font-weight: 100;
       color: #000000;
+
       margin-top:0;
       margin-bottom: .25em;
 
       a {
         color: #3f3f3f;
+        text-decoration: none;
       }
     }
 
