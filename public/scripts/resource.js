@@ -48,18 +48,21 @@ $(() => {
 
   $.get('/api/resources')
     .then((resources) => {
-      renderExpandedResource(resources);
+      renderExpandedResource(resources[0]);
     })
     .catch(err => {
       console.log('err:', err.message)
     })
 
-  const renderExpandedResource = (resources) => {
+  const renderExpandedResource = (resource) => {
     const $expandedResourceContainer = $('#expandedResource');
 
-    for (const resource of resources) {
-      const $expandedResource = createExpandedResource(resource);
-      $expandedResourceContainer.append($expandedResource);
-    }
+    const $expandedResource = createExpandedResource(resource);
+    $expandedResourceContainer.append($expandedResource);
+
+    // for (const resource of resources) {
+    //   const $expandedResource = createExpandedResource(resource);
+    //   $expandedResourceContainer.append($expandedResource);
+    // }
   };
 });
