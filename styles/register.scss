@@ -8,81 +8,100 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.call-to-action {
-  position: absolute;
-  width: 860px;
-  height: 191px;
-  left: 20%;
-  top: 13%;
-
-  font-family: Futura;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 75px;
-  line-height: 100%;
-
-  display: flex;
   align-items: center;
-  text-align: center;
-  justify-content: center;
-  color: #000000;
+  margin-top: 7.5%;
+
+  .message {
+    display: flex;
+    flex-direction: column;
+
+    font-family: Futura;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.25em;
+
+    text-align: center;
+    line-height: 1.10em;
+    margin-bottom: .25em;
+  }
+
+  .signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: center;
+    width: 20em;
+    height: auto;
+    background: #F3F3F3;
+    border-radius: 25px;
+
+    .logo {
+      align-items: center;
+      flex-direction: column;
+      width: 60px;
+      height: 60px;
+      margin-top: 2.75em;
+      margin-bottom: 2.3em;
+      /* Logo size will change later*/
+      border: 2px yellowgreen solid;
+    }
+
+    .form-inline {
+      font-family: Futura;
+      font-style: normal;
+      font-weight: 100;
+      color: #000000;
+    }
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .email {
+        padding: .5em 0 .5em 0;
+      }
+    }
+
+    .signup-button {
+      display: flex;
+      flex-direction: column;
+
+      cursor: pointer;
+      padding:0.3em 1.2em;
+      border-radius:2em;
+      border: 4px solid #000000;
+      box-sizing: border-box;
+      text-decoration:none;
+      margin-top: 2.75em;
+
+      color:#FFFFFF;
+      background-color: #000000;
+
+      text-align: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .signup-button:hover {
+      color: #000000;
+      border-radius:2em;
+      border: 4px solid #000000;
+      border-color: #000000;
+      background-color: transparent;
+      transition: background-color ease 550ms;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: .5em 0 0 0;
+      color: #434343;
+      font-size: .75em;
+      margin-bottom: 2.75em;
+    }
+  }
 }
 
-.login-container {
-  position: absolute;
-  width: 423px;
-  height: 500px;
-  left: 508px;
-  top: 40%;
-
-  background: #F3F3F3;
-  border-radius: 25px;
-}
-
-.logo {
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-
-  width: 60px;
-  height: 60px;
-
-  top: 20%;
-  border: 2px cyan solid;
-}
-
-h1 {
-  position: absolute;
-  width: 292px;
-  height: 32px;
-  left: 912px;
-  top: 35%;
-
-  font-family: Futura;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
-
-  color: #000000;
-}
-
-.grid {
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-}
-
-.form-inline {
-  position: absolute;
-  width: 283px;
-  height: 201px;
-  left: 916px;
-  top: 482px;
-}
