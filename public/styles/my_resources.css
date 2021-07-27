@@ -1,18 +1,30 @@
+.liked-header {
+  display: flex;
+  flex-direction: column;
+}
+
 .liked-pair {
   display: flex;
+  flex-direction: row;
+  border: green 2px solid;
 }
 .liked-resources-container {
   display: flex;
   flex-direction: column;
+  border: hotpink 2px solid;
   /* justify-content: flex-start; */
 }
 
 .my-resources-container {
   padding-left: 30px;
+  border: cyan 2px solid;
+}
+#resources {
+  display: flex;
 }
 
 .resource-row {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: row;
   justify-content: flex-start;
 }
