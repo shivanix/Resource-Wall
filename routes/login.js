@@ -20,7 +20,7 @@ module.exports = (db) => {
       if (!user) {
         return res.status(403).send(error.message);
       } else {
-        req.session.user_id = user.id;
+        req.session.user_id = user;
         res.redirect("/home");
       }
     })

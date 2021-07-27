@@ -1,37 +1,25 @@
-<!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<script src="https://kit.fontawesome.com/b5e8de9747.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+<link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+<link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Navvvvvv</title> -->
-  <!-- Font awesome kit Code -->
-  <script src="https://kit.fontawesome.com/b5e8de9747.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-  <link rel="stylesheet" href="public/styles/header.css"/>
-<!-- </head> -->
-
-<!-- <body> -->
-  <header>
-
-    <div class="logo">
-      <i class="fas fa-briefcase"></i>
-      <span>Resource-Wall</span>
+<header>
+  <div class="left-side">
+    <i class="fas fa-briefcase"></i>
+    <span class="app-name">reSource</span>
+  </div>
+  <div class="nav-links">
+    <div class="profile-link">
+      <!-- <h2>Hello, <a href="/profile">TaylorSwift</a>!</h2> -->
+      <h2>Hello, <a href="/profile"><%=`${username}` %></a>!</h2>
     </div>
-
-    <div class="right-block">
-
-      <div class="greeting">
-        <span>Hello Taylor!</span>
-      </div>
-
-      <div class="nav_links">
-        <a href="/create"><button>Create a Resource</button></a>
-        <a href="/my-resources"><button>My Resource</button></a>
-        <a href="#"><button>Logout</button></button> </a>
-      </div>
+    <div class="bottom-links">
+      <a class="create" href="/create" role="button">Create a Resource</a>
+      <a class="my-resources" href="/my-resources" role="button">My Resources</a>
+      <form class="form-inline" action="/logout" method="POST">
+        <a class="logout" href="/" type="submit">Logout</a>
+      </form>
     </div>
-  </header>
-<!-- </body> -->
+  </div>
+</header>
 
-<!-- </html> -->

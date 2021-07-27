@@ -28,8 +28,8 @@ module.exports = (db) => {
       if (!newUser) {
         res.send("Error: ", error.message);
       } else {
-        req.session.user_id = newUser.id;
-        console.log(newUser.id)
+        req.session.user_id = newUser;
+        console.log("##############", newUser)
         res.redirect("/home");
       }
     })

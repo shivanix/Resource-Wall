@@ -46,10 +46,11 @@ const widgetsRoutes = require("./routes/widgets");
 const createResourceRoutes = require("./routes/create");
 const resourceRoutes = require("./routes/resource");
 const homeRoutes = require("./routes/home");
+const myResourcesRoutes = require("./routes/my-resources");
 
 const registerRoutes = require("./routes/register");
 const loginRoutes = require("./routes/login");
-const logoutRoutes = require("./routes/logout")
+const logoutRoutes = require("./routes/logout");
 
 const myResourcesRoutes = require("./routes/my-resources");
 const resourcesRoutes = require("./routes/resources-router");
@@ -60,9 +61,13 @@ const resourcesRoutes = require("./routes/resources-router");
 app.use("/api/widgets", widgetsRoutes(db));
 app.use("/api/resources", resourcesRoutes(db));
 
-/*-------- When call to /api/-- is made, the connected method will run -----*/
+
 app.use("/create", createResourceRoutes(db));
 app.use("/resource", resourceRoutes(db));
+
+/* Route for /my-resources */
+app.use("/my-resources", myResourcesRoutes(db));
+
 // /dashboard
 // /users/:id/resources -- if I want to see the resources of a specific user
 app.use("/home", homeRoutes(db));

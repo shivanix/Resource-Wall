@@ -1,18 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Read-more</title>
-  <script src="https://kit.fontawesome.com/b5e8de9747.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/styles/create_resource.css">
-
-  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reSource</title>
+    <script src="https://kit.fontawesome.com/b5e8de9747.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
-</head>
-<body>
-  <%- include('partials/header') %>
-  <h1>This IS The ReadMore Page</h1>
-</body>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/styles/resource.css" type="text/css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <main id="all-contents">
+    <section id="expanded-resource">
+      <div class="resource-header">
+        <div class="title-and-category">
+          <h3>Category</h3>
+          <h1>Title Goes Here</h1>
+        </div>
+        <div class="rating">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+      </div>
+      <div class="contents">
+        <img class="image" src="/images/cupcake.png"></i>
+        <div class="description-container">
+            Biscuit sweet roll candy muffin marzipan sugar plum toffee dragée. Gummi bears dragée jelly powder gingerbread pudding pudding bear claw. Toffee brownie croissant. Cookie gummies chupa chups muffin cake halvah topping cheesecake biscuit.
+        </div>
+        <div class="more-containers">
+          <div class="left-side">
+            <div class="tags">Tags Go Here</div>
+            <a href="/" class="external-link">Visit Source</a>
+          </div>
+          <div class="like-button">
+            <span class="fas fa-heart"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="comments-section">
+      <div class="comment-form">
+        <h3>Leave a Comment</h3>
+        <form id="form-id" method="POST" action="/resource">
+          <textarea id="text" name="text" placeholder="Start typing..."></textarea>
+          <div class="buttons">
+            <div class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <button class="submit-comment" type="submit">SEND</button>
+          </div>
+        </form>
+      </div>
+      <div class="comments">
+        <article class="comments-container">
+          <h4>See What Others Have to Say</h4>
+          <div class="comment">
+            <span>Topping sweet dragée pudding. Dessert pie pastry gummi bears donut soufflé soufflé.</span>
+          </div>
+          <div class="username">Joe.Alwyn</div>
+          <div class="timestamp">1 hour ago</div>
+          <div class="comment">
+            <span>Jelly tart gummi bears liquorice sweet roll tootsie roll cupcake tootsie roll.</span>
+          </div>
+          <div class="username">Benjamin_Button</div>
+          <div class="timestamp">2 hours ago</div>
+        </article>
+      </div>
+    </section>
+
+    </main>
+  </body>
 </html>

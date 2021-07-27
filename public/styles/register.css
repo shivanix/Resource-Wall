@@ -10,74 +10,94 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-top: 7.5%;
 }
 
-.call-to-action {
-  position: absolute;
-  width: 860px;
-  height: 191px;
-  left: 20%;
-  top: 13%;
+body .message {
+  display: flex;
+  flex-direction: column;
   font-family: Futura;
   font-style: normal;
   font-weight: bold;
-  font-size: 75px;
-  line-height: 100%;
-  display: flex;
-  align-items: center;
+  font-size: 4.25em;
   text-align: center;
-  justify-content: center;
-  color: #000000;
+  line-height: 1.10em;
+  margin-bottom: .25em;
 }
 
-.login-container {
-  position: absolute;
-  width: 423px;
-  height: 500px;
-  left: 508px;
-  top: 40%;
+body .signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20em;
+  height: auto;
   background: #F3F3F3;
   border-radius: 25px;
 }
 
-.logo {
-  position: absolute;
+body .signup-container .logo {
   align-items: center;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
   width: 60px;
   height: 60px;
-  top: 20%;
-  border: 2px cyan solid;
+  margin-top: 2.75em;
+  margin-bottom: 2.3em;
+  /* Logo size will change later*/
+  border: 2px yellowgreen solid;
 }
 
-h1 {
-  position: absolute;
-  width: 292px;
-  height: 32px;
-  left: 912px;
-  top: 35%;
+body .signup-container .form-inline {
   font-family: Futura;
   font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
+  font-weight: 100;
   color: #000000;
 }
 
-.grid {
-  position: absolute;
-  align-items: center;
+body .signup-container .grid {
+  display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-inline {
-  position: absolute;
-  width: 283px;
-  height: 201px;
-  left: 916px;
-  top: 482px;
+body .signup-container .grid .email {
+  padding: .5em 0 .5em 0;
+}
+
+body .signup-container .signup-button {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  text-decoration: none;
+  margin-top: 2.75em;
+  color: #FFFFFF;
+  background-color: #000000;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+body .signup-container .signup-button:hover {
+  color: #000000;
+  border-radius: 2em;
+  border: 4px solid #000000;
+  border-color: #000000;
+  background-color: transparent;
+  transition: background-color ease 550ms;
+}
+
+body .signup-container a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: .5em 0 0 0;
+  color: #434343;
+  font-size: .75em;
+  margin-bottom: 2.75em;
 }
