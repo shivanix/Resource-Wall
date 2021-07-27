@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-content: center;
   margin-top: 15%;
 }
 
@@ -22,8 +23,9 @@ body .message {
   font-style: normal;
   font-weight: bold;
   font-size: 4.5em;
+  text-align: right;
   line-height: 1.10em;
-  width: 50%;
+  width: auto;
 }
 
 body .login-container {
@@ -31,7 +33,7 @@ body .login-container {
   flex-direction: column;
   align-items: center;
   margin-left: .25em;
-  padding: 7em 1em 7em 1em;
+  padding: 7em 2em 7em 2em;
   background: #F3F3F3;
   border-radius: 25px;
 }
@@ -48,6 +50,7 @@ body .login-container .logo {
 body .login-container h1 {
   font-family: Futura;
   font-style: normal;
+  font-size: 1.75em;
   font-weight: 100;
   color: #000000;
 }
@@ -66,19 +69,19 @@ body .login-container .grid {
   align-items: center;
 }
 
-body .login-container .email {
+body .login-container .grid .email {
   display: flex;
   flex-direction: column;
-  padding: 0 0 .25em 0;
+  padding: 0 0 .5em 0;
 }
 
-body .login-container .password {
+body .login-container .grid .password {
   display: flex;
   flex-direction: column;
-  padding: 0 0 .25em 0;
+  padding: 0 0 1.5em 0;
 }
 
-body .login-container .login-button {
+body .login-container .grid .login-button {
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -94,7 +97,7 @@ body .login-container .login-button {
   transition: all 0.2s;
 }
 
-body .login-container .login-button:hover {
+body .login-container .grid .login-button:hover {
   color: #000000;
   border-radius: 2em;
   border: 4px solid #000000;
@@ -103,7 +106,7 @@ body .login-container .login-button:hover {
   transition: background-color ease 550ms;
 }
 
-body .login-container a {
+body .login-container .grid a {
   display: flex;
   justify-content: center;
   text-align: center;

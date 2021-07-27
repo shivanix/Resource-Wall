@@ -7,7 +7,8 @@ html {
 body {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:  center;
+  align-content: center;
   margin-top: 15%;
 
   .message {
@@ -21,8 +22,9 @@ body {
     font-weight: bold;
     font-size: 4.5em;
 
+    text-align: right;
     line-height: 1.10em;
-    width: 50%;
+    width: auto;
   }
 
   .login-container {
@@ -30,7 +32,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-left: .25em;
-    padding: 7em 1em 7em 1em;
+    padding: 7em 2em 7em 2em;
 
     background: #F3F3F3;
     border-radius: 25px;
@@ -47,6 +49,7 @@ body {
     h1 {
       font-family: Futura;
       font-style: normal;
+      font-size: 1.75em;
       font-weight: 100;
       color: #000000;
     }
@@ -64,55 +67,54 @@ body {
       justify-content: center;
       align-items: center;
 
-    }
+      .email {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 .5em 0;
+      }
 
-    .email {
-      display: flex;
-      flex-direction: column;
-      padding: 0 0 .25em 0;
-    }
+      .password {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 1.5em 0;
+      }
 
-    .password {
-      display: flex;
-      flex-direction: column;
-      padding: 0 0 .25em 0;
-    }
+      .login-button {
+        display: flex;
+        flex-direction: column;
 
-    .login-button {
-      display: flex;
-      flex-direction: column;
+        cursor: pointer;
+        padding:0.3em 1.2em;
+        border-radius:2em;
+        border: 4px solid #000000;
+        box-sizing: border-box;
+        text-decoration:none;
 
-      cursor: pointer;
-      padding:0.3em 1.2em;
-      border-radius:2em;
-      border: 4px solid #000000;
-      box-sizing: border-box;
-      text-decoration:none;
+        color:#FFFFFF;
+        background-color: #000000;
 
-      color:#FFFFFF;
-      background-color: #000000;
+        text-align: center;
+        justify-content: center;
+        transition: all 0.2s;
+      }
 
-      text-align: center;
-      justify-content: center;
-      transition: all 0.2s;
-    }
+      .login-button:hover {
+        color: #000000;
+        border-radius:2em;
+        border: 4px solid #000000;
+        border-color: #000000;
+        background-color: transparent;
+        transition: background-color ease 550ms;
+      }
 
-    .login-button:hover {
-      color: #000000;
-      border-radius:2em;
-      border: 4px solid #000000;
-      border-color: #000000;
-      background-color: transparent;
-      transition: background-color ease 550ms;
-    }
-
-    a {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      padding: .25em 0 0 0;
-      color: #434343;
-      font-size: .75em;
+      a {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: .25em 0 0 0;
+        color: #434343;
+        font-size: .75em;
+      }
     }
   }
 }
