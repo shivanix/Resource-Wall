@@ -9,19 +9,28 @@ module.exports = (db) => {
     };
 
     res.render("resource", templateVars);
-      })
+  });
 
   router.get("/:id", (req, res) => {
     const id = req.params.id;
     // console.log('reqparams', req.params)
     const user = req.session.user_id;
+    const resource = req.session.resource;
     const templateVars = {
       username: user.username,
-      id
+      id: resource.id
     };
-
     res.render("resource", templateVars);
-      })
+  });
+
+
+  /* So that logged in users can post a created resource */
+  router.post("/:id", (req, res) => {
+    const id = req.params.id;
+    const user = req.session.user_id;
+
+    res.render("resource")
+  });
 
   return router;
 };
