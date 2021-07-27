@@ -58,4 +58,6 @@ $(() => {
       $resourceContainer.append($resource);
     }
   };
+
+
 });
