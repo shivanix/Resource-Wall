@@ -46,19 +46,24 @@ const widgetsRoutes = require("./routes/widgets");
 const createResourceRoutes = require("./routes/create");
 const resourceRoutes = require("./routes/resource");
 const homeRoutes = require("./routes/home");
+const myResourcesRoutes = require("./routes/my-resources");
 
 const registerRoutes = require("./routes/register");
 const loginRoutes = require("./routes/login");
-const logoutRoutes = require("./routes/logout")
+const logoutRoutes = require("./routes/logout");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 
-/*-------- When call to /api/-- is made, the connected method will run -----*/
+
 app.use("/create", createResourceRoutes(db));
 app.use("/resource", resourceRoutes(db));
+
+/* Route for /my-resources */
+app.use("/my-resources", myResourcesRoutes(db));
+
 // /dashboard
 // /users/:id/resources -- if I want to see the resources of a specific user
 app.use("/home", homeRoutes(db));
@@ -81,9 +86,6 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get('/my-resources', (req, res) => {
-  res.render('my-resources')
-})
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
