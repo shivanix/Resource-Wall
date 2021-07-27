@@ -16,6 +16,23 @@ module.exports = (db) => {
     const user = req.body;
     console.log("THIS IS THE USER: ", user);
 
+    db.query(`SELECT * FROM users
+    WHERE email = $1
+    OR username = $2`, [user.email, user.username])
+    .then((result) => {
+
+      if(result.rows[0]){
+        console.log("USER ALREADY EXISTS #####################");
+        res.status(400).send('User already exists');
+        return null;
+      };
+
+    })
+    .catch((err) => {
+      console.log(err.message);
+      return null;
+    });
+
     db.query(`
       INSERT INTO users(email, username, password)
       VALUES ($1, $2, $3)
