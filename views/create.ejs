@@ -21,21 +21,21 @@
     <div class="main-block-header">
       <h1>Create a Resource</h1>
     </div>
-    <form id="details" method="POST "action="/resource/:id">
+    <form id="details" method="POST" action="/create">
       <div class="info">
         <input class="category" type="text" name="category" placeholder="Category">
-        <input class="title" type="text" name="name" placeholder="Title">
-        <input class ="link" type="text" name="name" placeholder="Enter link to thumbnail picture...">
+        <input class="title" type="text" name="title" placeholder="Title">
+        <input class ="link" type="text" name="photo_url" placeholder="Enter link to thumbnail picture...">
         <textarea name="summary" rows="3" cols="50" placeholder="Enter your summary here..."></textarea>
-        <textarea name="contents" rows="8" cols="50" placeholder="Enter contents here..."></textarea>
+        <textarea name="description" rows="8" cols="50" placeholder="Enter contents here..."></textarea>
         <div class="tags">
-          <input type="text" name="name" placeholder="#tag1">
-          <input type="text" name="name" placeholder="#tag2">
-          <input type="text" name="name" placeholder="#tag3">
+          <input type="text" name="tags" placeholder="#tag1">
+          <input type="text" name="tags" placeholder="#tag2">
+          <input type="text" name="tags" placeholder="#tag3">
         </div>
-        <input class ="link" type="text" name="name" placeholder="Enter link to source...">
+        <input class ="link" type="text" name="resource_url" placeholder="Enter link to source...">
       </div>
-      <button type="submit" href="/my-resources">Submit</button>
+      <button type="submit">Submit</button>
     </form>
   </main>
 </body>
