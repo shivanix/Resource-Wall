@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS resources CASCADE;
 CREATE TABLE resources (
   id SERIAL PRIMARY KEY NOT NULL,
   owner_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  created_at TIMESTAMP NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT NOW(),
   resource_url VARCHAR(255) NOT NULL,
   thumbnail_photo_url VARCHAR(255) NOT NULL,
   title VARCHAR(255) NOT NULL,
