@@ -46,8 +46,9 @@ $(() => {
     return $expandedResource;
   }
 
-  $.get('/api/resources')
+  $.get('/api/resources/1')
     .then((resources) => {
+      console.log('resources', resources)
       renderExpandedResource(resources[0]);
     })
     .catch(err => {
@@ -59,10 +60,5 @@ $(() => {
 
     const $expandedResource = createExpandedResource(resource);
     $expandedResourceContainer.append($expandedResource);
-
-    // for (const resource of resources) {
-    //   const $expandedResource = createExpandedResource(resource);
-    //   $expandedResourceContainer.append($expandedResource);
-    // }
   };
 });
