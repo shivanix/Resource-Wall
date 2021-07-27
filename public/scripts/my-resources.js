@@ -55,9 +55,5 @@ $(() => {
       const $resource = createResource(resource);
       $resourceContainer.append($resource);
     }
-
-
   };
-
-
 });
