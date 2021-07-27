@@ -7,84 +7,114 @@ html {
 body {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin-top: 25%;
-}
+  justify-content:  center;
+  align-content: center;
+  margin-top: 15%;
 
-.message {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin-right: .25em;
+  .message {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: .25em;
 
-  font-family: Futura;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 4.5em;
+    font-family: Futura;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.5em;
 
-  line-height: 1.10em;
-  width: 50%;
+    text-align: right;
+    line-height: 1.10em;
+    width: auto;
+  }
 
-  border: fuchsia 2px solid;
-}
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: .25em;
+    padding: 7em 2em 7em 2em;
 
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: .25em;
-  border: cyan 2px solid;
-}
+    background: #F3F3F3;
+    border-radius: 25px;
 
-.logo {
-  align-items: center;
-  flex-direction: column;
-  width: 60px;
-  height: 60px;
-  /* Logo size will change later*/
+    .logo {
+      align-items: center;
+      flex-direction: column;
+      width: 60px;
+      height: 60px;
+      /* Logo size will change later*/
+      border: 2px yellowgreen solid;
+    }
 
-  border: 2px yellowgreen solid;
-}
+    h1 {
+      font-family: Futura;
+      font-style: normal;
+      font-size: 1.75em;
+      font-weight: 100;
+      color: #000000;
+    }
 
-h1 {
-  font-family: Futura;
-  font-style: normal;
-  font-weight: 500;
-  color: #000000;
-}
+    .form-inline {
+      font-family: Futura;
+      font-style: normal;
+      font-weight: 100;
+      color: #000000;
+    }
 
-.form-inline {
-  font-family: Futura;
-  font-style: normal;
-  font-weight: 500;
-  color: #000000;
-}
+    .grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-.login-button {
-  display: flex;
-  flex-direction: column;
+      .email {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 .5em 0;
+      }
 
-  cursor: pointer;
-  padding:0.3em 1.2em;
-  margin:0 0.3em 0.3em 0;
-  border-radius:2em;
-  border: 4px solid #000000;
-  box-sizing: border-box;
-  text-decoration:none;
+      .password {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 1.5em 0;
+      }
 
-  color:#FFFFFF;
-  background-color: #000000;
+      .login-button {
+        display: flex;
+        flex-direction: column;
 
-  text-align: center;
-  justify-content: center;
-  transition: all 0.2s;
-}
+        cursor: pointer;
+        padding:0.3em 1.2em;
+        border-radius:2em;
+        border: 4px solid #000000;
+        box-sizing: border-box;
+        text-decoration:none;
 
-.login-button:hover {
-  color: #000000;
-  border-radius:2em;
-  border: 4px solid #000000;
-  border-color: #000000;
-  background-color: transparent;
-  transition: background-color ease 550ms;
+        color:#FFFFFF;
+        background-color: #000000;
+
+        text-align: center;
+        justify-content: center;
+        transition: all 0.2s;
+      }
+
+      .login-button:hover {
+        color: #000000;
+        border-radius:2em;
+        border: 4px solid #000000;
+        border-color: #000000;
+        background-color: transparent;
+        transition: background-color ease 550ms;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: .25em 0 0 0;
+        color: #434343;
+        font-size: .75em;
+      }
+    }
+  }
 }

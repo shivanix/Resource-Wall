@@ -18,7 +18,7 @@ module.exports = (db) => {
       const user = data.rows[0];
       console.log("DATA ROW: ", user)
       if (!user) {
-        return res.status(403);
+        return res.status(403).send(error.message);
       } else {
         req.session.user_id = user.id;
         res.redirect("/home");
