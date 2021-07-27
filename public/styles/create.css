@@ -1,0 +1,46 @@
+#main-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Noto Sans;
+}
+
+#main-block .main-block-header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+
+#main-block #details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#main-block #details .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#main-block #details .info .category {
+  margin-bottom: .5em;
+}
+
+#main-block #details .info .title {
+  margin-bottom: .5em;
+}
+
+#main-block #details .info .link {
+  margin-bottom: .5em;
+}
+
+#main-block #details .info textarea {
+  resize: none;
+  margin-bottom: .5em;
+}
+
+#main-block #details .info .tags {
+  margin-bottom: .5em;
+}
