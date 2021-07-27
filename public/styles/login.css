@@ -8,76 +8,106 @@ html {
 
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 15%;
 }
 
-.call-to-action {
-  position: absolute;
-  width: 581px;
-  height: 212px;
-  left: 170px;
-  top: 45%;
+body .message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: .25em;
   font-family: Futura;
   font-style: normal;
   font-weight: bold;
-  font-size: 80px;
-  line-height: 106px;
-  display: flex;
-  align-items: center;
-  text-align: right;
-  color: #000000;
+  font-size: 4.5em;
+  line-height: 1.10em;
+  width: 50%;
 }
 
-.login-container {
-  position: absolute;
+body .login-container {
   display: flex;
-  justify-content: center;
-  width: 423px;
-  height: 600px;
-  left: 846px;
-  top: 10%;
+  flex-direction: column;
+  align-items: center;
+  margin-left: .25em;
+  padding: 7em 1em 7em 1em;
   background: #F3F3F3;
   border-radius: 25px;
 }
 
-.logo {
-  position: absolute;
+body .login-container .logo {
   align-items: center;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
   width: 60px;
   height: 60px;
-  top: 20%;
-  border: 2px cyan solid;
+  /* Logo size will change later*/
+  border: 2px yellowgreen solid;
 }
 
-h1 {
-  position: absolute;
-  width: 292px;
-  height: 32px;
-  left: 912px;
-  top: 35%;
+body .login-container h1 {
   font-family: Futura;
   font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
+  font-weight: 100;
   color: #000000;
 }
 
-.grid {
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+body .login-container .form-inline {
+  font-family: Futura;
+  font-style: normal;
+  font-weight: 100;
+  color: #000000;
 }
 
-.form-inline {
-  position: absolute;
-  width: 283px;
-  height: 201px;
-  left: 916px;
-  top: 482px;
+body .login-container .grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body .login-container .email {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 .25em 0;
+}
+
+body .login-container .password {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 .25em 0;
+}
+
+body .login-container .login-button {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #000000;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+body .login-container .login-button:hover {
+  color: #000000;
+  border-radius: 2em;
+  border: 4px solid #000000;
+  border-color: #000000;
+  background-color: transparent;
+  transition: background-color ease 550ms;
+}
+
+body .login-container a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: .25em 0 0 0;
+  color: #434343;
+  font-size: .75em;
 }
