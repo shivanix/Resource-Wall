@@ -60,6 +60,7 @@ const resourcesRoutes = require("./routes/resources-router");
 // app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 app.use("/api/resources", resourcesRoutes(db));
+app.use("/api/users", usersRoutes(db));
 
 
 app.use("/create", createResourceRoutes(db));
