@@ -14,5 +14,21 @@ module.exports = (db) => {
           .json({ error: err.message });
       });
   });
+
+  router.get("/:id", (req, res) => {
+    db.query(`
+    SELECT * FROM resources
+    WHERE id = $1;`, [req.params.id])
+      .then(results => {
+        const resources = results.rows;
+        res.json( resources );
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
+  });
+
   return router;
 };
