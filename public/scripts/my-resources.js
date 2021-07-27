@@ -29,7 +29,9 @@ $(() => {
     </div>
     </div>
     <div class='read-more'>
-    <button type='button' class='read-more'>READ MORE</button>
+      <form action="/resource" method='GET'>
+        <button type='submit' class='read-more' id='button-click'>READ MORE</button>
+      </form>
     </div>
     </div>
     `);
