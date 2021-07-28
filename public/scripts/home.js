@@ -23,7 +23,7 @@ $(() => {
     return $resource;
   }
 
-  $.get('/api/home')
+  $.get('/api/resources')
     .then((resources) => {
 
       // let resources = [];

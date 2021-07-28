@@ -72,7 +72,7 @@ app.use("/my-resources", myResourcesRoutes(db));
 // /dashboard
 // /users/:id/resources -- if I want to see the resources of a specific user
 app.use("/home", homeRoutes(db));
-app.use("/api/home", myHomeRoutes(db));
+// app.use("/api/home", myHomeRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
 /* Route for /register aka sign up page */
