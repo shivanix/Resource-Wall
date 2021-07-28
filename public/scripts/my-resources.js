@@ -1,5 +1,6 @@
 console.log('hello');
 $(() => {
+  // const { getResourcesById, getLikedResources } = require('../../db/resource-queries');
 
   const createResource = (resource) => {
     const $resource = $(`
@@ -51,6 +52,7 @@ $(() => {
     const $resourceContainer = $('#resources');
     const $savedResourceContainer = $('#savedResources');
 
+    // console.log('likedResources', getLikedResources())
     for (const resource of resources) {
       const $resource = createResource(resource);
       $resourceContainer.append($resource);
