@@ -14,14 +14,12 @@ module.exports = (db) => {
     res.render("resource", templateVars);
   });
 
+  /* Each individual resource can be viewed by any logged in user */
   router.get("/:id", (req, res) => {
     const id = req.params.id;
-    console.log("reqbody", req.bod);
-
     const user = req.session.user_id;
-    const resource = req.session.resource;
-    // console.log(".session", resource)
 
+<<<<<<< HEAD
     db.query(`
     SELECT * FROM resources
     WHERE id = $1`, [id])
@@ -44,20 +42,27 @@ module.exports = (db) => {
     //   // id: resource.id
     // };
     // res.render("resource", templateVars);
-  });
-
-
-  /* So that logged in users can post a created resource */
-  router.post("/:id", (req, res) => {
-    const id = req.params.id;
-    const user = req.session.user_id;
-    const resource = req.session.resource;
+=======
     const templateVars = {
       username: user.username,
-      id: resource.id
+      id: id
     };
-    res.render("resource", templateVars)
+    res.render("resource", templateVars);
+>>>>>>> 1849c5f236407bdb5f84079f98913bcc1f7f8851
   });
+
+  /* So that logged in users can post a created resource */
+  // router.post("/:id", (req, res) => {
+  //   const id = req.params.id;
+  //   const user = req.session.user_id;
+  //   const resource = req.session.resource;
+
+  //   const templateVars = {
+  //     username: user.username,
+  //     id: resource.id
+  //   };
+  //   res.render("resource", templateVars)
+  // });
 
   return router;
 };
