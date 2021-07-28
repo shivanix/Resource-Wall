@@ -26,18 +26,18 @@ module.exports = (db) => {
     res.render("resource", templateVars);
   });
 
-
   /* So that logged in users can post a created resource */
-  router.post("/:id", (req, res) => {
-    const id = req.params.id;
-    const user = req.session.user_id;
-    const resource = req.session.resource;
-    const templateVars = {
-      username: user.username,
-      id: resource.id
-    };
-    res.render("resource", templateVars)
-  });
+  // router.post("/:id", (req, res) => {
+  //   const id = req.params.id;
+  //   const user = req.session.user_id;
+  //   const resource = req.session.resource;
+
+  //   const templateVars = {
+  //     username: user.username,
+  //     id: resource.id
+  //   };
+  //   res.render("resource", templateVars)
+  // });
 
   return router;
 };
