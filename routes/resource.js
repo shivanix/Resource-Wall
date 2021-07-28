@@ -1,5 +1,8 @@
 const express = require('express');
 const router  = express.Router();
+const bodyParser = require('body-parser');
+
+router.use(bodyParser.urlencoded({extended:true}));
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
@@ -13,9 +16,12 @@ module.exports = (db) => {
 
   router.get("/:id", (req, res) => {
     const id = req.params.id;
-    // console.log('reqparams', req.params)
+    console.log('reqparams', req.params)
+    // console.log('resbody', res.body)
+    console.log('reqbody', req.body)
     const user = req.session.user_id;
     const resource = req.session.resource;
+    // console.log('resource', resource)
     const templateVars = {
       username: user.username,
       id: resource.id
@@ -28,8 +34,12 @@ module.exports = (db) => {
   router.post("/:id", (req, res) => {
     const id = req.params.id;
     const user = req.session.user_id;
-
-    res.render("resource")
+    const resource = req.session.resource;
+    const templateVars = {
+      username: user.username,
+      id: resource.id
+    };
+    res.render("resource", templateVars)
   });
 
   return router;
