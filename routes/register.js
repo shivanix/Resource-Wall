@@ -8,28 +8,38 @@ module.exports = (db) => {
 
   /* ERRORS:
     If user already exists (username or email) -- ERROR
-    If input password does not match requirements (>= 8 characters) -- ERROR
+    If input password does not match requirements (>= 8 characters) -- ERROR -- STRETCH
     If email or password is empty -- ERROR
     Else -- none of the errors happened, the details will be stored to users: email, username, password will be stored in the database
   */
   router.post("/", (req, res) => {
     const user = req.body;
-    console.log("THIS IS THE USER: ", user);
-    let userAlreadyExists = false;
-    db.query(`SELECT * FROM users
+
+    if (!user.email || !user.username || !user.password) {
+      return res.status(400).send("All fields are mandatory.")
+    }
+    if (user.password.length < 8) {
+      return res.status(400).send("Password should be at least 8 characters.")
+    }
+
+    db.query(`
+    SELECT * FROM users
     WHERE email = $1
-    OR username = $2`, [user.email, user.username])
+    OR username = $2
+    `, [user.email, user.username])
     .then((result) => {
       console.log("Rows result: ",result.rows[0]);
+      const userData = result.rows[0];
+
       //If user with same email or username was found
-      if(result.rows[0]){
-        userAlreadyExists = true;
-        console.log("USER ALREADY EXISTS #####################");
-        res.status(400).send('User already exists');
-        return null;
-      }
+      if (result.rows.length > 0) {
+        if (userData.email === user.email) {
+          return res.status(400).send('Email already exists');
+        } else if (userData.username === user.username) {
+          return res.status(400).send('Username already exists');
+        }
+      } else {
       //If no user with same email or username was found
-      else{
         createNewUser(user, req, res);
       }
     })
@@ -37,8 +47,6 @@ module.exports = (db) => {
       console.log(err.message);
       return null;
     });
-
-
   })
 
   const createNewUser = (user, req, res)=>{
@@ -49,13 +57,12 @@ module.exports = (db) => {
         `, [user.email, user.username, user.password])
       .then((data) => {
         const newUser = data.rows[0];
-        console.log("THIS IS NEWUSER: ". newUser) // getting undefined here
-
+        // console.log("THIS IS NEWUSER: ". newUser) // getting undefined here
         if (!newUser) {
           res.send("Error: ", error.message);
         } else {
           req.session.user_id = newUser;
-          console.log("##############", newUser)
+          // console.log("##############", newUser)
           res.redirect("/home");
         }
       })
@@ -63,7 +70,6 @@ module.exports = (db) => {
         res.status(400).send(error.message);
       })
   }
-
   return router;
 };
 
