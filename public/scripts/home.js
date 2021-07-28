@@ -2,9 +2,9 @@ console.log('homeful');
 $(() => {
 
   const createResource = (resource) => {
-    console.log('resourcesAt5', resource)
+    console.log("####################!111", resource)
     const $resource = $(`
-    <div class="box">
+  <div class="box">
     <div class="mini-resource" id="thumbnail">
     <img src=${resource.thumbnail_photo_url} class='resource-thumbnail'>
     </div>
@@ -17,7 +17,7 @@ $(() => {
       <a href="#"><button>Category</button></a>
       <a href="/resource"><button>Read More</button></a>
     </div>
-</div>
+  </div>
     `);
 
     return $resource;
@@ -27,19 +27,20 @@ $(() => {
     .then((resources) => {
 
       // let resources = [];
+      // console.log("resources")
       console.log('resources', resources);
-      renderResources(resources);
+      displayResources(resources);
     })
     .catch(err => {
       console.log('err:', err.message)
     })
 
-  const renderResources = (resources) => {
+  const displayResources = (resources) => {
     const $resourceContainer = $('#home_container');
-    console.log('resources49', typeof resources);
+    console.log("!!!!!!!!!!!!!!!!!!!!!!@1111");
 
     for (const resource of resources) {
-      console.log('resources53', resources);
+      console.log('$$$$$$$$$$$$$$$$$$$$2222', resources);
       const $resource = createResource(resource);
       $resourceContainer.append($resource);
     }
