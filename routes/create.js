@@ -13,8 +13,8 @@ module.exports = (db) => {
   router.post("/", (req, res) => {
     const resource = req.body;
     // console.log("RESOURCE BODY AKA REQ.BODY:  ", resource)
-    let owner = req.session.user_id
-    console.log("THIS IS THE OWNER.ID: ######", owner.id)
+    const owner = req.session.user_id
+    // console.log("THIS IS THE OWNER.ID: ######", owner.id)
 
     db.query(`
       INSERT INTO resources(owner_id, category, title, thumbnail_photo_url, summary, description, tag_1, tag_2, tag_3, resource_url)
