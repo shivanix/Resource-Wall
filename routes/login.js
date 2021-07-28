@@ -9,6 +9,11 @@ module.exports = (db) => {
 
   router.post("/", (req, res) => {
     const { email, password } = req.body;
+
+    if (!email || !password) {
+      return res.status(400).send(`All fields are mandatory. Please <a href="/login"> try again</a>`)
+    }
+
     db.query(`
       SELECT *
       FROM users
@@ -17,7 +22,7 @@ module.exports = (db) => {
       `, [email, password])
     .then((data) => {
       const user = data.rows[0];
-      console.log("DATA ROW: ", user)
+      // console.log("DATA ROW: ", user)
       if (!user) {
         return res.status(403).send(error.message);
       } else {
