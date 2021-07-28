@@ -16,10 +16,10 @@ module.exports = (db) => {
     const user = req.body;
 
     if (!user.email || !user.username || !user.password) {
-      return res.status(400).send("All fields are mandatory.")
+      return res.status(400).send(`All fields are mandatory. Please <a href="/register"> try again</a>!`)
     }
     if (user.password.length < 8) {
-      return res.status(400).send("Password should be at least 8 characters.")
+      return res.status(400).send(`Password should be at least 8 characters. Please <a href="/register"> try again</a>!`)
     }
 
     db.query(`
@@ -34,9 +34,9 @@ module.exports = (db) => {
       //If user with same email or username was found
       if (result.rows.length > 0) {
         if (userData.email === user.email) {
-          return res.status(400).send('Email already exists');
+          return res.status(400).send(`Email already exists. Please <a href="/register"> try again</a>!`);
         } else if (userData.username === user.username) {
-          return res.status(400).send('Username already exists');
+          return res.status(400).send(`Username already exists. Please <a href="/register"> try again</a>!`);
         }
       } else {
       //If no user with same email or username was found
