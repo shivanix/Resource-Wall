@@ -10,11 +10,11 @@ $(() => {
     </div>
     <div class="text">
         <h3>${resource.title}</h3>
-        <p>${resource.description}</p>
+        <p>${resource.summary}</p>
 
     </div>
     <div class="buttons">
-      <a href="#"><button>Category</button></a>
+      <a href="#"><button>${resource.category}</button></a>
       <a href="/resource"><button>Read More</button></a>
     </div>
   </div>
