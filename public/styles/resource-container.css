@@ -14,6 +14,12 @@
   padding-left: 5px;
 }
 
+.read-link {
+  border: black solid;
+  border-radius: 15px;
+  padding: 5px;
+}
+
 .read-more {
   width: 385px;
   height: 49px;
@@ -21,6 +27,9 @@
   border-radius: 15px;
   border-color: black;
   font-family: Noto Sans;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .resource-container {

@@ -29,9 +29,9 @@ $(() => {
     </div>
     </div>
     <div class='read-more'>
-      <form action="/resource" method='GET'>
-        <button type='submit' class='read-more' id='button-click'>READ MORE</button>
-      </form>
+      <a href='/resource/${resource.id}' class='read-link'>
+      READ MORE
+      </a>
     </div>
     </div>
     `);
@@ -58,6 +58,6 @@ $(() => {
       $resourceContainer.append($resource);
     }
   };
-
+  console.log('outerResource:', resources)
 
 });
