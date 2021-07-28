@@ -22,11 +22,28 @@ module.exports = (db) => {
     const resource = req.session.resource;
     // console.log(".session", resource)
 
-    const templateVars = {
-      username: user.username,
-      id: resource.id
-    };
-    res.render("resource", templateVars);
+    db.query(`
+    SELECT * FROM resources
+    WHERE id = $1`, [id])
+      .then((results) => {
+        console.log(results.rows[0])
+        const templateVars = {
+          username: user.username,
+          resource: results.rows[0]
+        }
+        res.render('resource', templateVars)
+      })
+      .catch(err => {
+        console.log(err.message)
+        res.sendStatus(400)
+      })
+
+    // const templateVars = {
+    //   username: user.username,
+    //   resource
+    //   // id: resource.id
+    // };
+    // res.render("resource", templateVars);
   });
 
 
