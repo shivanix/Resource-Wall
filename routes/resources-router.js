@@ -78,7 +78,7 @@ const id = req.params.id;
 db.query(`
 SELECT comments.*, users.username,
 FROM comments
-
+JOIN
 WHERE id = $1 AND comment = $2;`, [id, req.body.comment])
   .then(results => {
     const comments = results.rows;
@@ -93,25 +93,38 @@ WHERE id = $1 AND comment = $2;`, [id, req.body.comment])
   });
 
 
-  })
+  });
 
-  router.post("/:id/comments", (req, res) => {
+  router.post("/comments", (req, res) => {
+
+    console.log("Before insert");
 //extract id value
 // extract the comment from the form
 
 // insert q into saved comments in db associated with that id
 
 //return username of the user that created the comment
-const id = req.params.id;
+const id = req.body.resource_id;
 const comment = req.body.comment;
+const timestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
 
 
-db.query(`INSERT INTO comments(user_id, resource_id, comment, created_at)
-    VALUES ($1, $2, $3, $4)
-    RETURNING *;`, [user.id, resource.id, comments.])
+db.query(`INSERT INTO comments(resource_id, comment, created_at)
+    VALUES ($1, $2, $3)
+    RETURNING *;`, [ id, comment, timestamp])
+    .then((data) => {
 
+      //do a q to select user;
+      const newComment = data.rows[0];
+      console.log("&&&&&&&&&&&& NEW comment", newComment)
+      res.send(newComment);
+      })
+    .catch((error) => {
+      console.log(error.message);
 
+    })
 
+//
 
   })
   return router;

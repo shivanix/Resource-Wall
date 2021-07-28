@@ -15,7 +15,7 @@ $(() => {
     </div>
     <div class="buttons">
       <a href="#"><button>${resource.category}</button></a>
-      <a href="/resource"><button>Read More</button></a>
+      <a href="/resource/${resource.id}"><button>Read More</button></a>
     </div>
   </div>
     `);

@@ -63,20 +63,12 @@
     <section id="comments-section">
       <div class="comment-form">
         <h3>Leave a Comment</h3>
+
         <form id="form-id">
+          <input type="hidden" name="resource_id" value="<%= resource.id%>">
 
-          <div style=" background-color: red;
-          border: 1px solid black;
-          color: white;
+          <textarea id="tx01" name="comment" placeholder="Start typing..."></textarea>
 
-          display: none;
-          font-weight: bold;
-          margin-bottom: 50px;
-          padding-left: 1.5em;
-          padding-right: 1.5em;" class="error-message">
-            <p>error message goes here</p>
-          </div>
-          <textarea id="text" name="text" placeholder="Start typing..."></textarea>
           <div class="buttons">
             <div class="rating">
               <span class="fa fa-star checked"></span>

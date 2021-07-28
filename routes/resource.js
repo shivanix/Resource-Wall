@@ -49,5 +49,6 @@ module.exports = (db) => {
     res.render("resource", templateVars)
   });
 
+
   return router;
 };
