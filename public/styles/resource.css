@@ -12,68 +12,68 @@ html {
   font-family: Noto Sans;
 }
 
-#all-contents #expanded-resource {
+#all-contents #expandedResource {
   display: flex;
   flex-direction: column;
   padding: 0 2em 0 4em;
   max-width: 65%;
 }
 
-#all-contents #expanded-resource .resource-header {
+#all-contents #expandedResource .resource-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#all-contents #expanded-resource .resource-header .title-and-category {
+#all-contents #expandedResource .resource-header .title-and-category {
   line-height: 1em;
   margin-bottom: .5em;
 }
 
-#all-contents #expanded-resource .resource-header .title-and-category h3 {
+#all-contents #expandedResource .resource-header .title-and-category h3 {
   text-transform: uppercase;
 }
 
-#all-contents #expanded-resource .resource-header .rating {
+#all-contents #expandedResource .resource-header .rating {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
   padding-bottom: 1em;
 }
 
-#all-contents #expanded-resource .contents {
+#all-contents #expandedResource .contents {
   display: flex;
   flex-direction: column;
 }
 
-#all-contents #expanded-resource .contents .image {
+#all-contents #expandedResource .contents .image {
   max-width: 100%;
   border-radius: 1.5em;
   margin-bottom: 2em;
 }
 
-#all-contents #expanded-resource .contents .description-container {
+#all-contents #expandedResource .contents .description-container {
   border-radius: 1.5em;
   padding: 1.25em;
   line-height: 1.55em;
   border: 3px solid #000000;
 }
 
-#all-contents #expanded-resource .contents .more-containers {
+#all-contents #expandedResource .contents .more-containers {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: .5em;
 }
 
-#all-contents #expanded-resource .contents .more-containers .left-side {
+#all-contents #expandedResource .contents .more-containers .left-side {
   display: flex;
   flex-direction: column;
   padding-right: .5em;
   width: 90%;
 }
 
-#all-contents #expanded-resource .contents .more-containers .left-side .tags {
+#all-contents #expandedResource .contents .more-containers .left-side .tags {
   border-radius: 1.5em;
   line-height: 1.55em;
   text-transform: uppercase;
@@ -83,7 +83,7 @@ html {
   background-color: #000000;
 }
 
-#all-contents #expanded-resource .contents .more-containers .left-side .external-link {
+#all-contents #expandedResource .contents .more-containers .left-side .external-link {
   border-radius: 1.5em;
   line-height: 1.55em;
   text-transform: uppercase;
@@ -94,13 +94,13 @@ html {
   margin-top: .5em;
 }
 
-#all-contents #expanded-resource .contents .more-containers .like-button {
+#all-contents #expandedResource .contents .more-containers .like-button {
   display: flex;
   width: 10%;
   border: hotpink 2px solid;
 }
 
-#all-contents #expanded-resource .contents .more-containers .like-button .fas {
+#all-contents #expandedResource .contents .more-containers .like-button .fas {
   display: flex;
   flex-direction: column;
   justify-content: center;

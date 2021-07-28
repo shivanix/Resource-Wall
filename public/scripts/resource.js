@@ -3,7 +3,6 @@ $(() => {
 
   const createExpandedResource = (resource) => {
     const $expandedResource = $(`
-    <section id="expanded-resource">
       <div class="resource-header">
         <div class="title-and-category">
           <h3>${resource.category}</h3>
@@ -40,7 +39,6 @@ $(() => {
           </div>
         </div>
       </div>
-    </section>
     `);
 
     return $expandedResource;
