@@ -17,6 +17,7 @@
 
     <!-- Script handler -->
     <script src="/scripts/resource.js"></script>
+    <script src="/scripts/comments.js"></script>
   </head>
   <body>
     <%- include('partials/header') %>
@@ -62,7 +63,19 @@
     <section id="comments-section">
       <div class="comment-form">
         <h3>Leave a Comment</h3>
-        <form id="form-id" method="POST" action="/resource">
+        <form id="form-id">
+
+          <div style=" background-color: red;
+          border: 1px solid black;
+          color: white;
+
+          display: none;
+          font-weight: bold;
+          margin-bottom: 50px;
+          padding-left: 1.5em;
+          padding-right: 1.5em;" class="error-message">
+            <p>error message goes here</p>
+          </div>
           <textarea id="text" name="text" placeholder="Start typing..."></textarea>
           <div class="buttons">
             <div class="rating">
@@ -84,11 +97,6 @@
           </div>
           <div class="username">Joe.Alwyn</div>
           <div class="timestamp">1 hour ago</div>
-          <div class="comment">
-            <span>Jelly tart gummi bears liquorice sweet roll tootsie roll cupcake tootsie roll.</span>
-          </div>
-          <div class="username">Benjamin_Button</div>
-          <div class="timestamp">2 hours ago</div>
         </article>
       </div>
     </section>

@@ -46,7 +46,6 @@ const widgetsRoutes = require("./routes/widgets");
 const createResourceRoutes = require("./routes/create");
 const resourceRoutes = require("./routes/resource");
 const homeRoutes = require("./routes/home");
-const myHomeRoutes = require("./routes/home-router");
 const myResourcesRoutes = require("./routes/my-resources");
 
 const registerRoutes = require("./routes/register");
@@ -72,7 +71,6 @@ app.use("/my-resources", myResourcesRoutes(db));
 // /dashboard
 // /users/:id/resources -- if I want to see the resources of a specific user
 app.use("/home", homeRoutes(db));
-// app.use("/api/home", myHomeRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
 /* Route for /register aka sign up page */
