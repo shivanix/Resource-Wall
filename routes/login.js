@@ -11,7 +11,7 @@ module.exports = (db) => {
     const { email, password } = req.body;
 
     if (!email || !password) {
-      return res.status(400).send("All fields are mandatory.")
+      return res.status(400).send(`All fields are mandatory. Please <a href="/login"> try again</a>`)
     }
 
     db.query(`
