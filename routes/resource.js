@@ -13,9 +13,12 @@ module.exports = (db) => {
 
   router.get("/:id", (req, res) => {
     const id = req.params.id;
-    // console.log('reqparams', req.params)
+    console.log("reqbody", req.bod);
+
     const user = req.session.user_id;
     const resource = req.session.resource;
+    // console.log(".session", resource)
+
     const templateVars = {
       username: user.username,
       id: resource.id
