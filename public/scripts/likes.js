@@ -6,7 +6,7 @@ $(() => {
 
     if ($(this).hasClass(".is-liked")) {
       val++
-      //userID and resourceID should be enter into the likes table (db) --liking the resource(by clicking the button)
+      //userID and resourceID should be entered into the likes table (db) --liking the resource(by clicking the button)
     } else {
       val--
       //userID and resourceID should be deleted from the likes table (db) --removing a like (by clicking again)
