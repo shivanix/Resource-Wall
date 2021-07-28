@@ -2,7 +2,6 @@ console.log('hello');
 $(() => {
 
   const createResource = (resource) => {
-    console.log('resourcesAt5', resource)
     const $resource = $(`
     <div class='resource-container' id='rc1'>
     <div>
@@ -41,23 +40,26 @@ $(() => {
 
   $.get('/api/resources')
     .then((resources) => {
-      console.log('resources', resources);
       renderResources(resources);
     })
     .catch(err => {
       console.log('err:', err.message)
     })
 
+
   const renderResources = (resources) => {
     const $resourceContainer = $('#resources');
-    console.log('resources49', typeof resources)
+    const $savedResourceContainer = $('#savedResources');
 
     for (const resource of resources) {
-      console.log('resources53', resources);
       const $resource = createResource(resource);
       $resourceContainer.append($resource);
     }
+
+    for (const resource of resources) {
+      const $resource = createResource(resource);
+      $savedResourceContainer.append($resource);
+    }
   };
-  console.log('outerResource:', resources)
 
 });
