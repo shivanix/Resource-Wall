@@ -17,6 +17,7 @@
 .read-link {
   border: black solid;
   border-radius: 15px;
+  padding: 5px;
 }
 
 .read-more {
@@ -29,7 +30,6 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  padding: 5px;
 }
 
 .resource-container {

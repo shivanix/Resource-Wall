@@ -21,6 +21,7 @@
 }
 #resources {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .resource-row {
