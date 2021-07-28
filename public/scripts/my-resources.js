@@ -29,7 +29,7 @@ $(() => {
     </div>
     </div>
     <div class='read-more'>
-      <a href='/resource'>
+      <a href='/resource/${resource.id}' class='read-link'>
       READ MORE
       </a>
     </div>
