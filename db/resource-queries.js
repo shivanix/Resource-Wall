@@ -23,11 +23,11 @@ const getResourcesByOwnerId = (owner_id) => {
     });
 }
 
-const getLikedResources = () => {
+const getLikedResources = (users_id) => {
   return db.query(`SELECT * FROM resources
   JOIN likes ON resources.id = likes.resource_id
   JOIN users ON users.id = likes.user_id
-  WHERE users.id = 1 AND is_liked = true;`, [])
+  WHERE users.id = $1 AND is_liked = true;`, [users_id])
     .then((results) => {
       return results.rows;
     });
@@ -36,5 +36,6 @@ const getLikedResources = () => {
 module.exports = {
   getResources,
   getResourcesById,
-  getResourcesByOwnerId
+  getResourcesByOwnerId,
+  getLikedResources
 }
