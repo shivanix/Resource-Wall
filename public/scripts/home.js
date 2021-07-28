@@ -10,7 +10,7 @@ $(() => {
     </div>
     <div class="text">
         <h3>${resource.title}</h3>
-        <p>${resource.description}</p>
+        <p>${resource.summary}</p>
 
     </div>
     <div class="buttons">
