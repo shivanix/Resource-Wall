@@ -10,9 +10,11 @@ module.exports = (db) => {
   router.get("/", (req, res) => {
 
     const user = req.session.user_id;
+    console.log('user', user)
 
     const templateVars = {
-      username: user.username
+      username: user.username,
+      id: user.id
     };
 
     res.render("my-resources", templateVars);
