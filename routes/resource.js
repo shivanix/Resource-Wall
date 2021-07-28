@@ -19,15 +19,13 @@ module.exports = (db) => {
     const id = req.params.id;
     const user = req.session.user_id;
 
-<<<<<<< HEAD
     db.query(`
     SELECT * FROM resources
     WHERE id = $1`, [id])
       .then((results) => {
-        console.log(results.rows[0])
         const templateVars = {
           username: user.username,
-          resource: results.rows[0]
+          resource: results.rows[0],
         }
         res.render('resource', templateVars)
       })
@@ -35,34 +33,21 @@ module.exports = (db) => {
         console.log(err.message)
         res.sendStatus(400)
       })
-
-    // const templateVars = {
-    //   username: user.username,
-    //   resource
-    //   // id: resource.id
-    // };
-    // res.render("resource", templateVars);
-=======
-    const templateVars = {
-      username: user.username,
-      id: id
-    };
-    res.render("resource", templateVars);
->>>>>>> 1849c5f236407bdb5f84079f98913bcc1f7f8851
   });
 
-  /* So that logged in users can post a created resource */
-  // router.post("/:id", (req, res) => {
-  //   const id = req.params.id;
-  //   const user = req.session.user_id;
-  //   const resource = req.session.resource;
 
-  //   const templateVars = {
-  //     username: user.username,
-  //     id: resource.id
-  //   };
-  //   res.render("resource", templateVars)
-  // });
+
+  /* So that logged in users can post a created resource */
+  router.post("/:id", (req, res) => {
+    const id = req.params.id;
+    const user = req.session.user_id;
+    const resource = req.session.resource;
+    const templateVars = {
+      username: user.username,
+      id: resource.id
+    };
+    res.render("resource", templateVars)
+  });
 
   return router;
 };
