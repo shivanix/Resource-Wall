@@ -10,22 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/styles/resource-container.css" type="text/css"/>
-   <link rel="stylesheet" href="/styles/home_page.css"/>
-   <link rel="stylesheet" href="/styles/main.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/home.css" type="text/css"/>
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script src="/scripts/home.js"></script>
   </head>
   <body>
-
     <%- include('partials/header') %>
 
-    <div class="search">
-      <input type="text" placeholder="Search..">
-    </div>
+    <select id="search" class="search-bar" name="category">
+      <option value="" disabled selected hidden>Category</option>
+      <option value="animals">Animals</option>
+      <option value="arts-and-crafts">Arts & Crafts</option>
+      <option value="education">Education</option>
+      <option value="food-and-drinks">Food & Drinks</option>
+      <option value="music">Music</option>
+      <option value="other">Other</option>
+    </select>
 
     <div class="main_container" id="home_container">
 
+    </div>
   </body>
 </html>
