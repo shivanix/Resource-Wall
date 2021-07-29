@@ -58,7 +58,7 @@ console.log("rrriogrigrigrigrgi", commentData);
     <span>${commentData.comment}</span>
   </div>
   <div class="username">${commentData.username}</div>
-  <div class="timestamp">${commentData.created_at}</div>
+  <div class="timestamp">${timeago.format(commentData.created_at)}</div>
 </article>`;
 
   const $comment = $(htmlMarkup);

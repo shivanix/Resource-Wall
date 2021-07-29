@@ -110,9 +110,12 @@ console.log("idddd", id);
 console.log("bodyyyyy", req.body);
 // console.log("reqqqqqqq", req);
 db.query(`
-SELECT *
+SELECT comments.*,users.username
 FROM comments
-WHERE resource_id = $1;`, [id])
+JOIN users
+ON comments.user_id = users.id
+WHERE resource_id = $1
+ORDER BY comments.created_at ASC;`, [id])
   .then(results => {
     console.log("REsults returnedddddd");
     const comments = results.rows;
@@ -155,12 +158,9 @@ db.query(`INSERT INTO comments(resource_id, comment, created_at, user_id)
       db.query(`SELECT username FROM users
       WHERE id = $1`,[userID])
       .then((result) =>{
-        console.log('@@@@@@',result.rows);
         const newComment = data.rows[0];
         newComment.user_id = userID;
         newComment['username'] = result.rows[0].username;
-        console.log("&&&&&&&&&&&& NEW comment", newComment)
-        console.log("USER IDDDDDDDDDDDDDDDDDDDDDD:::::::", newComment.user_id);
         res.send(newComment);
       })
 
