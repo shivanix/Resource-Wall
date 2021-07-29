@@ -120,23 +120,22 @@ body .call-to-action .thumbnails .image-1 {
   max-width: 20em;
   max-height: 20em;
   cursor: pointer;
-  object-fit: cover;
-  margin-right: 2em;
+  border-radius: 2em;
 }
 
 body .call-to-action .thumbnails .image-2 {
   max-width: 20em;
   max-height: 20em;
   cursor: pointer;
-  object-fit: cover;
+  margin: 0 2em 0 2em;
+  border-radius: 2em;
 }
 
 body .call-to-action .thumbnails .image-3 {
   max-width: 20em;
   max-height: 20em;
   cursor: pointer;
-  margin-left: 2em;
-  object-fit: cover;
+  border-radius: 2em;
 }
 
 body .call-to-action h1 {
@@ -149,7 +148,7 @@ body .call-to-action h1 {
   text-align: center;
   margin-top: .25em;
   margin-bottom: .25em;
-  color: #000000;
+  color: #006D5B;
 }
 
 body .call-to-action .secondary-login {

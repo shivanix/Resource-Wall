@@ -117,23 +117,22 @@ body {
         max-width: 20em;
         max-height: 20em;
         cursor: pointer;
-        object-fit: cover;
-        margin-right: 2em;
+        border-radius: 2em;
       }
 
       .image-2 {
         max-width: 20em;
         max-height: 20em;
         cursor: pointer;
-        object-fit: cover;
+        margin: 0 2em 0 2em;
+        border-radius: 2em;
       }
 
       .image-3 {
         max-width: 20em;
         max-height: 20em;
         cursor: pointer;
-        margin-left: 2em;
-        object-fit: cover;
+        border-radius: 2em;
       }
     }
 
@@ -148,7 +147,7 @@ body {
       margin-top: .25em;
       margin-bottom: .25em;
 
-      color: #000000;
+      color: #006D5B;
     }
 
     .secondary-login {

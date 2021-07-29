@@ -23,7 +23,15 @@
     </div>
     <form id="details" method="POST" action="/create">
       <div class="info">
-        <input class="category" type="text" name="category" placeholder="Category">
+          <select id="category" name="category">
+              <option value="" disabled selected hidden>Category</option>
+              <option value="animals">Animals</option>
+              <option value="arts-and-crafts">Arts & Crafts</option>
+              <option value="education">Education</option>
+              <option value="food-and-drinks">Food & Drinks</option>
+              <option value="music">Music</option>
+              <option value="other">Other</option>
+          </select>
         <input class="title" type="text" name="title" placeholder="Title">
         <input class ="link" type="text" name="photo_url" placeholder="Enter link to thumbnail picture...">
         <textarea name="summary" rows="3" cols="50" placeholder="Enter your summary here..."></textarea>
