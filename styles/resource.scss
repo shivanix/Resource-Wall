@@ -10,15 +10,12 @@ html {
   flex-direction: row;
   font-family: Noto Sans;
   width: 100%;
-  border: cyan 2px solid;
 
-
-  #expandedResource {
+  #expanded-resource {
     display: flex;
     flex-direction: column;
     padding: 0 2em 0 4em;
-    max-height: 65%;
-    border: fuchsia 2px solid;
+    max-width: 65%;
 
     .resource-header {
       display: flex;
@@ -34,17 +31,27 @@ html {
         }
       }
 
-      .star-rating {
+      .all-rating {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-end;
         padding-bottom: 1em;
+
+        .average__rating {
+          font-size: 1.5em;
+          cursor: pointer;
+        }
+        .average__rating:hover {
+          filter: drop-shadow(1px 1px 4px gold);
+        }
+
       }
     }
 
     .contents {
       display: flex;
       flex-direction: column;
+      font-size: 1em;
 
       .image {
         max-width: 100%;
@@ -54,6 +61,7 @@ html {
 
       .description-container {
         border-radius:1.5em;
+        font-size: 1.25em;
         padding: 1.25em;
         line-height: 1.55em;
         border: 3px solid #000000;
@@ -63,7 +71,7 @@ html {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding-top: .5em;
+        padding-top: 1em;
 
         .left-side {
           display: flex;
@@ -72,34 +80,44 @@ html {
           width: 90%;
 
           .tags {
+            font-size: 1.25em;
             border-radius:1.5em;
-            line-height: 1.55em;
+            line-height: 2em;
             text-transform: uppercase;
             text-align: center;
+            margin-top: .5em;
             border: 3px solid #000000;
             color:#FFFFFF;
             background-color: #000000;
           }
 
           .external-link {
+            font-size: 1.25em;
             border-radius:1.5em;
             line-height: 1.55em;
             text-transform: uppercase;
+            text-decoration: none;
+            color: #000000;
             text-align: center;
             border: 3px solid #000000;
-            color:#FFFFFF;
-            background-color: #000000;
             margin-top: .5em;
           }
         }
 
         .like-button {
           display: flex;
-          width: 10%;
-          border: hotpink 2px solid;
 
             .fas {
-              font-size: 5em;
+              font-size: 7em;
+              color: #DA2A47;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+
+            .far {
+              font-size: 7em;
+              color: #DA2A47;
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -112,7 +130,8 @@ html {
   #comments-section {
     display: flex;
     flex-direction: column;
-    padding: 9em 4em 0 1em;
+    padding: 3em 2em 0 1em;
+    width: 35%;
 
     .comment-form {
       h3 {
@@ -121,6 +140,7 @@ html {
       }
 
       form {
+
         textarea {
           resize: none;
           width: 100%;
@@ -130,27 +150,30 @@ html {
           border: 3px solid #000000;
           padding: .5em;
         }
+        .rating-send {
 
-        .buttons {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
+          .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border: indianred 2px;
 
-          .submit-comment {
-            cursor: pointer;
-            padding:0.3em 1.2em;
-            border-radius:2em;
-            border: 4px solid #000000;
-            box-sizing: border-box;
-            text-decoration:none;
+            .submit-comment {
+              cursor: pointer;
+              padding:0.3em 1.2em;
+              border-radius:2em;
+              border: 4px solid #000000;
+              box-sizing: border-box;
+              text-decoration:none;
 
-            color:#FFFFFF;
-            background-color: #000000;
+              color:#FFFFFF;
+              background-color: #000000;
 
-            text-align: center;
-            justify-content: center;
-            transition: all 0.2s;
+              text-align: center;
+              justify-content: center;
+              transition: all 0.2s;
+            }
           }
         }
       }
@@ -162,7 +185,7 @@ html {
     flex-direction: column;
     margin-top: 2em;
 
-    .comments-container{
+    .comments-container {
 
       .comment {
         width: 100%;
@@ -171,6 +194,7 @@ html {
         line-height: 1.55em;
         border: 3px solid #000000;
         padding: .5em;
+        word-break: break-all;
       }
 
       .username {

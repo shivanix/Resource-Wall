@@ -11,100 +11,119 @@ html {
   flex-direction: row;
   font-family: Noto Sans;
   width: 100%;
-  border: cyan 2px solid;
 }
 
-#all-contents #expandedResource {
+#all-contents #expanded-resource {
   display: flex;
   flex-direction: column;
   padding: 0 2em 0 4em;
-  max-height: 65%;
-  border: fuchsia 2px solid;
+  max-width: 65%;
 }
 
-#all-contents #expandedResource .resource-header {
+#all-contents #expanded-resource .resource-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#all-contents #expandedResource .resource-header .title-and-category {
+#all-contents #expanded-resource .resource-header .title-and-category {
   line-height: 1em;
   margin-bottom: .5em;
 }
 
-#all-contents #expandedResource .resource-header .title-and-category h3 {
+#all-contents #expanded-resource .resource-header .title-and-category h3 {
   text-transform: uppercase;
 }
 
-#all-contents #expandedResource .resource-header .star-rating {
+#all-contents #expanded-resource .resource-header .all-rating {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
   padding-bottom: 1em;
 }
 
-#all-contents #expandedResource .contents {
-  display: flex;
-  flex-direction: column;
+#all-contents #expanded-resource .resource-header .all-rating .average__rating {
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
-#all-contents #expandedResource .contents .image {
+#all-contents #expanded-resource .resource-header .all-rating .average__rating:hover {
+  filter: drop-shadow(1px 1px 4px gold);
+}
+
+#all-contents #expanded-resource .contents {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+}
+
+#all-contents #expanded-resource .contents .image {
   max-width: 100%;
   border-radius: 1.5em;
   margin-bottom: 2em;
 }
 
-#all-contents #expandedResource .contents .description-container {
+#all-contents #expanded-resource .contents .description-container {
   border-radius: 1.5em;
+  font-size: 1.25em;
   padding: 1.25em;
   line-height: 1.55em;
   border: 3px solid #000000;
 }
 
-#all-contents #expandedResource .contents .more-containers {
+#all-contents #expanded-resource .contents .more-containers {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: .5em;
+  padding-top: 1em;
 }
 
-#all-contents #expandedResource .contents .more-containers .left-side {
+#all-contents #expanded-resource .contents .more-containers .left-side {
   display: flex;
   flex-direction: column;
   padding-right: .5em;
   width: 90%;
 }
 
-#all-contents #expandedResource .contents .more-containers .left-side .tags {
+#all-contents #expanded-resource .contents .more-containers .left-side .tags {
+  font-size: 1.25em;
   border-radius: 1.5em;
-  line-height: 1.55em;
+  line-height: 2em;
   text-transform: uppercase;
   text-align: center;
+  margin-top: .5em;
   border: 3px solid #000000;
   color: #FFFFFF;
   background-color: #000000;
 }
 
-#all-contents #expandedResource .contents .more-containers .left-side .external-link {
+#all-contents #expanded-resource .contents .more-containers .left-side .external-link {
+  font-size: 1.25em;
   border-radius: 1.5em;
   line-height: 1.55em;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
   text-align: center;
   border: 3px solid #000000;
-  color: #FFFFFF;
-  background-color: #000000;
   margin-top: .5em;
 }
 
-#all-contents #expandedResource .contents .more-containers .like-button {
+#all-contents #expanded-resource .contents .more-containers .like-button {
   display: flex;
-  width: 10%;
-  border: hotpink 2px solid;
 }
 
-#all-contents #expandedResource .contents .more-containers .like-button .fas {
-  font-size: 5em;
+#all-contents #expanded-resource .contents .more-containers .like-button .fas {
+  font-size: 7em;
+  color: #DA2A47;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#all-contents #expanded-resource .contents .more-containers .like-button .far {
+  font-size: 7em;
+  color: #DA2A47;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,7 +132,8 @@ html {
 #all-contents #comments-section {
   display: flex;
   flex-direction: column;
-  padding: 9em 4em 0 1em;
+  padding: 3em 2em 0 1em;
+  width: 35%;
 }
 
 #all-contents #comments-section .comment-form h3 {
@@ -131,14 +151,15 @@ html {
   padding: .5em;
 }
 
-#all-contents #comments-section .comment-form form .buttons {
+#all-contents #comments-section .comment-form form .rating-send .buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border: indianred 2px;
 }
 
-#all-contents #comments-section .comment-form form .buttons .submit-comment {
+#all-contents #comments-section .comment-form form .rating-send .buttons .submit-comment {
   cursor: pointer;
   padding: 0.3em 1.2em;
   border-radius: 2em;
@@ -165,6 +186,7 @@ html {
   line-height: 1.55em;
   border: 3px solid #000000;
   padding: .5em;
+  word-break: break-all;
 }
 
 #all-contents .comments .comments-container .username {
