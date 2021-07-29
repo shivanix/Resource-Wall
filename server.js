@@ -47,6 +47,7 @@ const createResourceRoutes = require("./routes/create");
 const resourceRoutes = require("./routes/resource");
 const homeRoutes = require("./routes/home");
 const myResourcesRoutes = require("./routes/my-resources");
+const searchRoutes = require("./routes/search");
 
 const registerRoutes = require("./routes/register");
 const loginRoutes = require("./routes/login");
@@ -54,6 +55,7 @@ const logoutRoutes = require("./routes/logout");
 
 
 const resourcesRoutes = require("./routes/resources-router");
+const searchedResourcesRoutes = require("./routes/searched-router");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -61,9 +63,11 @@ const resourcesRoutes = require("./routes/resources-router");
 app.use("/api/widgets", widgetsRoutes(db));
 app.use("/api/resources", resourcesRoutes(db));
 app.use("/api/users", usersRoutes(db));
+app.use("/api/search", searchedResourcesRoutes(db));
 
 app.use("/create", createResourceRoutes(db));
 app.use("/resource", resourceRoutes(db));
+app.use("/search", searchRoutes(db));
 
 /* Route for /my-resources */
 app.use("/my-resources", myResourcesRoutes(db));

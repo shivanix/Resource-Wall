@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="/styles/layout.css" type="text/css" /> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- My Resources CSS-->
+    <link rel="stylesheet" href="/styles/resource-container.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/my-resources.css" type="text/css"/>
+    <!-- <link rel="stylesheet" href="/styles/main.css" type="text/css"/> -->
+
+
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
+
+    <script src="/scripts/search.js"></script>
+  </head>
+
+  <body>
+    <%- include('partials/header') %>
+    <main>
+      <div class="search-bar">
+        <select id="search" class="search-bar" name="category">
+          <option value="" disabled selected hidden>Category</option>
+          <option value="animals">Animals</option>
+          <option value="arts-and-crafts">Arts & Crafts</option>
+          <option value="education">Education</option>
+          <option value="food-and-drinks">Food & Drinks</option>
+          <option value="music">Music</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <section class='resource-row'>
+        <div class='liked-resources-container'>
+          <div class='liked-header'>
+            <h2>Likes</h2>
+          </div>
+          <div class='liked-pair'>
+            <div id="resources"></div>
+          </div>
+        </div>
+
+        <div class='my-resources-container'>
+          <div class='my-resources-header'>
+            <h2>My Resources</h2>
+          </div>
+          <div id="savedResources"></div>
+        </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
