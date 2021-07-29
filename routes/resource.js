@@ -90,8 +90,37 @@ module.exports = (db) => {
       })
   });
 
+  router.get("/:id/ratings", (req, res) =>{
+    const id = req.params.id;
+    console.log("Backend got hittttttt");
+    console.log("What do you mean by this%%%% id:", id);
+    console.log("Whats the body again^^^", req.body);
+    // console.log("reqqqqqqq", req);
 
-  router.post("/:id/rate", (req, res) => {
+    db.query(`
+    SELECT resources.*, ROUND(AVG(ratings.rating), 0) AS average_rating
+    FROM resources
+    JOIN ratings
+    ON resources.id = ratings.resource_id
+    WHERE ratings.resource_id = $1
+    GROUP BY resources.id;`, [id])
+      .then(results => {
+
+        const ratings = results.rows;
+
+       return res.json(ratings);
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({
+            error: err.message
+          });
+      });
+  });
+
+
+ router.post("/:id/rate", (req, res) => {
     const id = req.params.id;
     const user = req.session.user_id;
     const rating = req.body.rating;
@@ -100,11 +129,35 @@ module.exports = (db) => {
     console.log("THIS IS THE RAINGTGGGS STARRR: ", rating)
     console.log(req.body);
 
-    db.query(`
-      INSERT INTO ratings(rating, resource_id, user_id)
-      VALUES ($1, $2, $3)
-      RETURNING *;
-    `, [ rating ,id, user.id])
+    db.query(`SELECT rating
+    FROM ratings
+    WHERE user_id = $1
+    AND resource_id = $2;
+    `, [user.id, id])
+    .then((data) => {
+      if(!data.rows[0]){
+
+        console.log("Create a new ratingggggggggg");
+        db.query(`
+        INSERT INTO ratings(rating, resource_id, user_id)
+        VALUES ($1, $2, $3)
+        RETURNING *;
+      `, [ rating ,id, user.id])
+      .then((data) => {
+        res.status(200)
+      })
+      .catch((err) => {
+        console.log(err.message)
+        res.sendStatus(400)
+      })
+    }else{
+
+      console.log("Updatinggggg ratingggggg");
+      db.query(`
+      UPDATE ratings
+      SET rating = $1
+      WHERE resource_id = $2 AND user_id = $3;
+    `, [rating, id, user.id])
     .then((data) => {
       res.status(200)
     })
@@ -112,25 +165,16 @@ module.exports = (db) => {
       console.log(err.message)
       res.sendStatus(400)
     })
-  });
+    }
 
-  router.post("/:id/unrate", (req, res) => {
-    const id = req.params.id;
-    const user = req.session.user_id;
-    const rating = req.body.rating;
-
-    db.query(`
-      DELETE rating FROM ratings
-      WHERE resource_id = $1 and user_id = $2;
-    `, [id, user.id])
-    .then((data) => {
-      res.status(200)
     })
     .catch((err) => {
       console.log(err.message)
       res.sendStatus(400)
-    })
+    });
+
   });
+
 
   return router;
 };

@@ -1,8 +1,22 @@
 $(() => {
 
+  let pathName = window.location.pathname;
+  let resourceID = pathName.replace('/resource/', '')
+
+  $.ajax({
+    method: "GET",
+    url: `/resource/${resourceID}/ratings`,
+  })
+  .done((data) => {
+    console.log("Data::::average rating....", data[0].average_rating);
+
+
+  });
 const ratingStars = [...document.getElementsByClassName("rating__star")];
 const ratingResult = document.querySelector(".rating__result");
 printRatingResult(ratingResult);
+
+
 function executeRating(stars, result) {
    const starClassActive = "rating__star fas fa-star";
    const starClassUnactive = "rating__star far fa-star";
@@ -27,19 +41,17 @@ function executeRating(stars, result) {
          }
          console.log("ratinggggggggg", rating);
          let pathName = window.location.pathname;
-
          let resourceID = pathName.replace('/resource/', '')
+
          $.ajax({
           method: "POST",
           url: `/resource/${resourceID}/rate`,
           data: { rating }
         }).done(() => {
-          // if () {
 
-          // } else {
-
-          // }
         });
+
+
       };
    });
    console.log(stars.length);
