@@ -28,7 +28,15 @@
     <%- include('partials/header') %>
     <main>
       <div class="search-bar">
-        <input class="search-text" type="text" placeholder="Search..">
+        <select id="search" class="search-bar" name="category">
+          <option value="" disabled selected hidden>Category</option>
+          <option value="animals">Animals</option>
+          <option value="arts-and-crafts">Arts & Crafts</option>
+          <option value="education">Education</option>
+          <option value="food-and-drinks">Food & Drinks</option>
+          <option value="music">Music</option>
+          <option value="other">Other</option>
+        </select>
       </div>
       <section class='resource-row'>
         <div class='liked-resources-container'>
