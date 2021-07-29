@@ -1,6 +1,15 @@
 $(() => {
-// alert("Heyyyyyyyyyyyyy")
+
   console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+  $.ajax({
+    method: "GET",
+    url: "/api/resources/:id/comments"
+  }).done((comments) => {
+
+    console.log("users", comments);
+console.log("djfhllllllllllllllllllllllll", resource.id)
+    renderComments(comments);
+  });
 
   $("#form-id").submit(function(event) {
     console.log("Submiting form");
@@ -15,7 +24,7 @@ $(() => {
           console.log("Before submit");
         $.ajax({
           type: "POST",
-          url: '/api/resources/comments',
+          url: "/api/resources/comments",
           data: formData
 
         })
@@ -26,8 +35,8 @@ $(() => {
         .done((data)=>{
             $("#tx01").val('');//Clear text area
               console.log("BIGggggggggggggggg");
-            /*------------------------------------*/
 
+          console.log("Thissssssssssss", data);
             $('.comments').prepend(createCommentElement(data));
           });
 
@@ -40,15 +49,14 @@ $(() => {
 
 
 const createCommentElement = function(commentData) {
-  const userData = commentData.user;
 
-  console.log("%%%%%%%%%", commentData);
+console.log("On page loaddddddddddddddd");
 
   const htmlMarkup = ` <article class="comments-container">
   <div class="comment">
     <span>${commentData.comment}</span>
   </div>
-  <div class="username">Joe.Alwyn</div>
+  <div class="username">${commentData.username}</div>
   <div class="timestamp">${commentData.created_at}</div>
 </article>`;
 

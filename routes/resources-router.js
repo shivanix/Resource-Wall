@@ -74,15 +74,19 @@ module.exports = (db) => {
 //return the result in json
 
 const id = req.params.id;
-
+console.log("Backend hittttttt");
+console.log("idddd", id);
+console.log("bodyyyyy", req.body);
+console.log("reqqqqqqq", req);
 db.query(`
-SELECT comments.*, users.username,
+SELECT *
 FROM comments
-JOIN
-WHERE id = $1 AND comment = $2;`, [id, req.body.comment])
+WHERE resource_id = $1;`, [id])
   .then(results => {
+    console.log("REsults returnedddddd");
     const comments = results.rows;
-    res.json(comments);
+    console.log("comentsssssss", comments);
+   return res.json(comments);
   })
   .catch(err => {
     res
@@ -97,7 +101,7 @@ WHERE id = $1 AND comment = $2;`, [id, req.body.comment])
 
   router.post("/comments", (req, res) => {
 
-    console.log("Before insert");
+    // console.log("Before insert");
 //extract id value
 // extract the comment from the form
 
@@ -105,19 +109,29 @@ WHERE id = $1 AND comment = $2;`, [id, req.body.comment])
 
 //return username of the user that created the comment
 const id = req.body.resource_id;
+const userID = req.session.user_id.id;
 const comment = req.body.comment;
 const timestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
 
 
-db.query(`INSERT INTO comments(resource_id, comment, created_at)
-    VALUES ($1, $2, $3)
-    RETURNING *;`, [ id, comment, timestamp])
+db.query(`INSERT INTO comments(resource_id, comment, created_at, user_id)
+    VALUES ($1, $2, $3, $4)
+    RETURNING *;`, [ id, comment, timestamp, userID])
     .then((data) => {
 
       //do a q to select user;
-      const newComment = data.rows[0];
-      console.log("&&&&&&&&&&&& NEW comment", newComment)
-      res.send(newComment);
+
+      db.query(`SELECT username FROM users
+      WHERE id = $1`,[userID])
+      .then((result) =>{
+        console.log('@@@@@@',result.rows);
+        const newComment = data.rows[0];
+        newComment.user_id = userID;
+        newComment['username'] = result.rows[0].username;
+        console.log("&&&&&&&&&&&& NEW comment", newComment)
+        res.send(newComment);
+      })
+
       })
     .catch((error) => {
       console.log(error.message);

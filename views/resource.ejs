@@ -18,6 +18,7 @@
     <!-- Script handler -->
     <script src="/scripts/resource.js"></script>
     <script src="/scripts/comments.js"></script>
+
   </head>
   <body>
     <%- include('partials/header') %>
@@ -66,8 +67,10 @@
 
         <form id="form-id">
           <input type="hidden" name="resource_id" value="<%= resource.id%>">
+          <input type="hidden" name="username" value="<%= username%>">
 
           <textarea id="tx01" name="comment" placeholder="Start typing..."></textarea>
+
 
           <div class="buttons">
             <div class="rating">
