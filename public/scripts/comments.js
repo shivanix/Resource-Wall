@@ -1,13 +1,13 @@
 $(() => {
-
-  console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+  let pathName = window.location.pathname;
+  let resourceID = pathName.replace('/resource/', '')
+  console.log("helpppppppppppppp", resourceID);
   $.ajax({
     method: "GET",
-    url: "/api/resources/:id/comments"
+    url: `/api/resources/${resourceID}/comments`
   }).done((comments) => {
 
     console.log("users", comments);
-console.log("djfhllllllllllllllllllllllll", resource.id)
     renderComments(comments);
   });
 
@@ -51,6 +51,7 @@ console.log("djfhllllllllllllllllllllllll", resource.id)
 const createCommentElement = function(commentData) {
 
 console.log("On page loaddddddddddddddd");
+console.log("rrriogrigrigrigrgi", commentData);
 
   const htmlMarkup = ` <article class="comments-container">
   <div class="comment">
@@ -73,6 +74,7 @@ const renderComments = function(commentsArray) {
   // takes return value and prepends it to the comments class
 
   for (const comment of commentsArray) {
+
     const $newComment = createCommentElement(comment);
     $('.comments').prepend($newComment);
   }

@@ -77,7 +77,7 @@ const id = req.params.id;
 console.log("Backend hittttttt");
 console.log("idddd", id);
 console.log("bodyyyyy", req.body);
-console.log("reqqqqqqq", req);
+// console.log("reqqqqqqq", req);
 db.query(`
 SELECT *
 FROM comments
@@ -129,6 +129,7 @@ db.query(`INSERT INTO comments(resource_id, comment, created_at, user_id)
         newComment.user_id = userID;
         newComment['username'] = result.rows[0].username;
         console.log("&&&&&&&&&&&& NEW comment", newComment)
+        console.log("USER IDDDDDDDDDDDDDDDDDDDDDD:::::::", newComment.user_id);
         res.send(newComment);
       })
 
