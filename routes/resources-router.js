@@ -65,7 +65,7 @@ module.exports = (db) => {
   });
 
   router.get("/liked", (req, res) => {
-    db.query(`SELECT * FROM resources
+    db.query(`SELECT resources.* FROM resources
     JOIN likes ON resources.id = likes.resource_id
     JOIN users ON users.id = likes.user_id
     WHERE users.id = $1 AND is_liked = true;`, [req.session.user_id.id])
