@@ -50,6 +50,37 @@ module.exports = (db) => {
       });
   });
 
+  router.get("/saved", (req, res) => {
+    db.query(`SELECT * FROM resources
+    WHERE owner_id = $1;`, [req.session.user_id.id])
+      .then(results => {
+        const resources = results.rows;
+        res.json( resources );
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
+  });
+
+  router.get("/liked", (req, res) => {
+    db.query(`SELECT * FROM resources
+    JOIN likes ON resources.id = likes.resource_id
+    JOIN users ON users.id = likes.user_id
+    WHERE users.id = $1 AND is_liked = true;`, [req.session.user_id.id])
+      .then(results => {
+        const resources = results.rows;
+        res.json( resources );
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
+  });
+
+
   router.get("/:id", (req, res) => {
     db.query(`
     SELECT * FROM resources
