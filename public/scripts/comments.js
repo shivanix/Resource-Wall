@@ -1,6 +1,6 @@
 $(() => {
-  let pathName = window.location.pathname;
 
+  let pathName = window.location.pathname;
   let resourceID = pathName.replace('/resource/', '')
   console.log("helpppppppppppppp", resourceID);
 
@@ -15,7 +15,7 @@ $(() => {
   });
 
   $("#form-id").submit(function(event) {
-    console.log("Submiting form");
+    // console.log("Submiting form");
     // event.preventDefault() to prevent the default form submission behaviour.
     event.preventDefault();
 
@@ -53,8 +53,8 @@ $(() => {
 
 const createCommentElement = function(commentData) {
 
-console.log("On page loaddddddddddddddd");
-console.log("rrriogrigrigrigrgi", commentData);
+// console.log("On page loaddddddddddddddd");
+// console.log("rrriogrigrigrigrgi", commentData);
 
   const htmlMarkup = ` <article class="comments-container">
   <div class="comment">
@@ -73,7 +73,7 @@ console.log("rrriogrigrigrigrgi", commentData);
 
 const renderComments = function(commentsArray) {
   // loops through comments
-  // calls createCommentElement for each tweet
+  // calls createCommentElement for each comment
   // takes return value and prepends it to the comments class
 
   for (const comment of commentsArray) {

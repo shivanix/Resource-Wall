@@ -85,12 +85,14 @@
             <div class="star-buttons">
               <div class="star-rating">
                 <div class="rating">
-                  <span class="rating__result"></span>
-                   <i class="rating__star far fa-star"></i>
-                   <i class="rating__star far fa-star"></i>
-                   <i class="rating__star far fa-star"></i>
-                   <i class="rating__star far fa-star"></i>
-                   <i class="rating__star far fa-star"></i>
+                  <span class="rating__result"><%= rating %></span>
+                  <% for (let i = 0; i < rating; i++) { %>
+                   <i class="rating__star fas fa-star"></i>
+                  <% } %>
+                  <% for (let i = rating; i < 5; i++) { %>
+                  <i class="rating__star far fa-star"></i>
+                  <% } %>
+
                   </div>
               </div>
             </div>

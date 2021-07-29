@@ -61,18 +61,22 @@ module.exports = (db) => {
       });
   });
 
-  //router: /resource/id/comments
+/*
+//router: /resource/id/comments
 //extract the id value
 //create query t pull comments of that resource/:id from the
 // db--join q bet resources users comments
 //return the result in json
+*/
 
 router.get("/:id/comments", (req, res) =>{
 const id = req.params.id;
-console.log("Backend hittttttt");
-console.log("idddd", id);
-console.log("bodyyyyy", req.body);
-// console.log("reqqqqqqq", req);
+
+// clog("Backend hittttttt");
+// clog("idddd", id);
+// clg("bodyyyyy", req.body);
+// clogg("reqqqqqqq", req);
+
 db.query(`
 SELECT comments.*,users.username
 FROM comments
@@ -96,12 +100,14 @@ ORDER BY comments.created_at ASC;`, [id])
   });
 
 
-
+/*
 // console.log("Before insert");
 //extract id value
 // extract the comment from the form
 // insert q into saved comments in db associated with that id
 //return username of the user that created the comment
+*/
+
 
 router.post("/comments", (req, res) => {
 const id = req.body.resource_id;
@@ -115,7 +121,6 @@ db.query(`INSERT INTO comments(resource_id, comment, created_at, user_id)
     RETURNING *;`, [ id, comment, timestamp, userID])
     .then((data) => {
 
-      //do a q to select user;
 
       db.query(`SELECT username FROM users
       WHERE id = $1`,[userID])
