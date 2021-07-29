@@ -48,10 +48,10 @@ $(() => {
 
   const renderSavedResources = (savedResources) => {
     const $savedResourceContainer = $('#savedResources');
-    for (const resource of savedResources) {
-      const $resource = createResource(resource);
-      $savedResourceContainer.append($resource);
-    }
+
+    savedResources.reverse().forEach(resource => {
+      $savedResourceContainer.append(createResource(resource));
+    })
   };
 
   $.get('/api/resources/liked')
@@ -65,10 +65,9 @@ $(() => {
   const renderLikedResources = (likedResources) => {
     const $resourceContainer = $('#resources');
 
-    for (const resource of likedResources) {
-      const $resource = createResource(resource);
-      $resourceContainer.append($resource);
-    }
+    likedResources.reverse().forEach(resource => {
+      $resourceContainer.append(createResource(resource));
+    })
   }
 
 });
