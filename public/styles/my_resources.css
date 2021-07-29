@@ -5,9 +5,10 @@
 
 .liked-pair {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border: green 2px solid;
 }
+
 .liked-resources-container {
   display: flex;
   flex-direction: column;
@@ -19,6 +20,7 @@
   padding-left: 30px;
   border: cyan 2px solid;
 }
+
 #resources {
   display: flex;
   flex-wrap: wrap;
@@ -27,8 +29,8 @@
 .resource-row {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  border: black 2px solid;
+  justify-content: space-between;
+  /* border: black 2px solid; */
   border-radius: 15px;
 }
 

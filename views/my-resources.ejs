@@ -5,16 +5,14 @@
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="/styles/layout.css" type="text/css" /> -->
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- My Resources CSS-->
     <link rel="stylesheet" href="/styles/resource-container.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/my_resources.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/main.css" type="text/css"/>
-
-
+    <link rel="stylesheet" href="/styles/my-resources.css" type="text/css"/>
+    <!-- <link rel="stylesheet" href="/styles/main.css" type="text/css"/> -->
 
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
@@ -41,17 +39,19 @@
       <section class='resource-row'>
         <div class='liked-resources-container'>
           <div class='liked-header'>
-          <h2>Likes</h2>
+            <h2>Likes</h2>
           </div>
           <div class='liked-pair'>
-          <div id="resources"></div>
+            <div id="resources"></div>
           </div>
         </div>
 
         <div class='my-resources-container'>
-          <h2>My Resources</h2>
-          <div id="savedResources"></div>
+          <div class='my-resources-header'>
+            <h2>My Resources</h2>
           </div>
+          <div id="savedResources"></div>
+        </div>
         </div>
       </section>
     </main>

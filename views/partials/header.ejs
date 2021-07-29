@@ -1,11 +1,17 @@
 <script src="https://kit.fontawesome.com/b5e8de9747.js" crossorigin="anonymous"></script>
+
+<!-- FONT -->
+<link href="//db.onlinewebfonts.com/c/5a435951e815247112ca39e777f5e9d0?family=Futura+Hv" rel="stylesheet" type="text/css"/>
+<link href="//db.onlinewebfonts.com/c/401b7744fffbc1cd21fc71a6c08182ee?family=Futura+Heavy" rel="stylesheet" type="text/css"/>
+<link href="//db.onlinewebfonts.com/c/b46bb1fc76216f5cd90457d0451dbee4?family=Futura+Book" rel="stylesheet" type="text/css"/>
+
 <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
 <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
 <header>
   <div class="left-side">
-    <i class="fas fa-briefcase"></i>
+    <i class="logo"></i>
     <a class="app-name" href="/home">reSource</span>
   </div>
   <div class="nav-links">
@@ -14,7 +20,7 @@
       <h2>Hello, <a href="/my-resources"><%=`${username}` %>!</a></h2>
     </div>
     <div class="bottom-links">
-      <a class="create" href="/create" role="button">Create a Resource</a>
+      <a class="create" href="/create" role="button">Create</a>
       <a class="my-resources" href="/my-resources" role="button">My Resources</a>
       <form class="form-inline" action="/logout" method="POST">
         <button class="logout" type="submit">Logout</a>

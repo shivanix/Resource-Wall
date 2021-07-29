@@ -5,12 +5,14 @@
     <title>Home page</title>
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="/styles/layout.css" type="text/css" /> -->
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/styles/resource-container.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/home.css" type="text/css"/>
+    <!-- <link rel="stylesheet" href="/styles/home_page.css"/> -->
+    <!-- <link rel="stylesheet" href="/styles/main.css" type="text/css"/> -->
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -19,15 +21,17 @@
   <body>
     <%- include('partials/header') %>
 
-    <select id="search" class="search-bar" name="category">
-      <option value="" disabled selected hidden>Category</option>
-      <option value="animals">Animals</option>
-      <option value="arts-and-crafts">Arts & Crafts</option>
-      <option value="education">Education</option>
-      <option value="food-and-drinks">Food & Drinks</option>
-      <option value="music">Music</option>
-      <option value="other">Other</option>
-    </select>
+    <div class="search-bar">
+      <select id="search" name="category">
+        <option value="" disabled selected hidden>Category</option>
+        <option value="animals">Animals</option>
+        <option value="arts-and-crafts">Arts & Crafts</option>
+        <option value="education">Education</option>
+        <option value="food-and-drinks">Food & Drinks</option>
+        <option value="music">Music</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
 
     <div class="main_container" id="home_container">
 

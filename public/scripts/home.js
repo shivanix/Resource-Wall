@@ -4,20 +4,20 @@ $(() => {
   const createResource = (resource) => {
     console.log("####################!111", resource)
     const $resource = $(`
-  <div class="box">
-    <div class="mini-resource" id="thumbnail">
-    <img src=${resource.thumbnail_photo_url} class='resource-thumbnail'>
-    </div>
-    <div class="text">
-        <h3>${resource.title}</h3>
-        <p>${resource.summary}</p>
+    <div class="box">
+      <div class="mini-resource" id="thumbnail">
+      <img src=${resource.thumbnail_photo_url} class='resource-thumbnail'>
+      </div>
+      <div class="text">
+          <h3>${resource.title}</h3>
+          <p>${resource.summary}</p>
 
+      </div>
+      <div class="buttons">
+        <a href="#"><button>${resource.category}</button></a>
+        <a href="/resource/${resource.id}"><button>Read More</button></a>
+      </div>
     </div>
-    <div class="buttons">
-      <a href="#"><button>${resource.category}</button></a>
-      <a href="/resource/${resource.id}"><button>Read More</button></a>
-    </div>
-  </div>
     `);
 
     return $resource;
