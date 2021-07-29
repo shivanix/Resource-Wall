@@ -117,9 +117,9 @@ ON comments.user_id = users.id
 WHERE resource_id = $1
 ORDER BY comments.created_at ASC;`, [id])
   .then(results => {
-    console.log("REsults returnedddddd");
+
     const comments = results.rows;
-    console.log("comentsssssss", comments);
+
    return res.json(comments);
   })
   .catch(err => {
