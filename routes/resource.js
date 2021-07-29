@@ -29,12 +29,19 @@ module.exports = (db) => {
         WHERE user_id = $1 AND resource_id = $2;
         `, [user.id, id])
           .then((likedResults) => {
-            const templateVars = {
-              username: user.username,
-              resource: results.rows[0],
-              like: !!likedResults.rows.length
-            }
-          res.render('resource', templateVars)
+            db.query(`SELECT rating FROM ratings
+            WHERE user_id = $1 AND resource_id = $2;
+            `, [user.id, id])
+            .then((ratingResults) =>{
+              const templateVars = {
+                username: user.username,
+                resource: results.rows[0],
+                like: !!likedResults.rows.length,
+                rating: ratingResults.rows.length && ratingResults.rows[0].rating
+              }
+            res.render('resource', templateVars)
+            })
+
           })
       })
       .catch(err => {
