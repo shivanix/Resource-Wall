@@ -1,14 +1,4 @@
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
-  background: none;
-  display: flex;
-  flex-direction: column;
   font-family: Noto Sans;
 
   .search-bar {
@@ -17,64 +7,97 @@ body {
     margin: 2em 0 2em 0;
   }
 
-  .main_container{
+  #home_container{
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-content: center;
     padding: 0 2em 0 2em;
-    border: greenyellow 2px solid;
 
     .box {
-      flex-wrap: wrap;
-      display: flex;
-      flex-direction: column;
+      max-width: 45em;
       text-align: center;
-      margin-bottom: 3em;
-      border: indianred 2px;
+      margin-bottom: 2em;
+      margin-right: 1em;
 
-      @media screen and (min-width: 950px) {
-         flex-basis: 45%;
+      @media screen and (min-width: 1400px) {
+        max-width: 20em;
+        margin-right: 2em;
       }
 
-      @media screen and (min-width: 1300px) {
-        flex-basis: 30%;
-      }
-
-      @media screen and (min-width: 1850px) {
-        flex-basis: 25%;
-      }
-
-      .resource-thumbnail {
+      .mini-resource {
         border: none;
+        width: auto;
         border-radius: 1em;
+        overflow:hidden;
+
+        .resource-thumbnail {
+          width: 100%;
+        }
       }
 
       .text {
         h3 {
-          font-size: 1.5em;
+          font-size: 1.45em;
           margin: .75em 0 .75em 0;
-          border: rgb(179, 0, 255) 2px solid;
+          line-height: 1.2em;
+          text-transform: uppercase;
+          border: #000000 2px solid;
+          border-radius: 2em;
+          background: #000000;
+          color:#FFFF;
         }
 
         p {
           min-height: 4em;
+          font-size: 1.25em;
           text-align: left;
-          border: rgb(255, 0, 111) 2px solid;
+
         }
       }
 
       .buttons {
-        border: rgb(255, 234, 0) 2px solid;
+        .search-cat {
+          text-align: center;
+          padding: .25em 0 .25em 0;
+          font-size: 1em;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: .5em;
+          background: #000000;
+          border: #000000 2px solid;
+          border-radius: 2em;
 
-        a {
-          flex-direction: column;
+          a {
+            text-decoration: none;
+            color: #FFF;
+          }
         }
+
+        .read-more {
+          text-align: center;
+          padding: .25em 0 .25em 0;
+          font-size: 1em;
+          font-weight: 700;
+          text-transform: uppercase;
+          background: #000000;
+          border: #000000 2px solid;
+          border-radius: 2em;
+
+          a {
+            text-decoration: none;
+            color: #FFF;
+          }
+        }
+
+
       }
     }
   }
-  }
+
+}
 
 
 
