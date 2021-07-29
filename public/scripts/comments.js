@@ -1,7 +1,10 @@
 $(() => {
   let pathName = window.location.pathname;
+
   let resourceID = pathName.replace('/resource/', '')
   console.log("helpppppppppppppp", resourceID);
+
+
   $.ajax({
     method: "GET",
     url: `/api/resources/${resourceID}/comments`
