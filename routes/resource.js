@@ -23,7 +23,6 @@ module.exports = (db) => {
     SELECT * FROM resources
     WHERE id = $1;
     `, [id])
-
       .then((results) => {
         db.query(`
         SELECT * FROM likes
@@ -43,8 +42,6 @@ module.exports = (db) => {
         res.sendStatus(400)
       })
   });
-
-
 
   // /* So that logged in users can edit a created resource */
   // router.post("/:id", (req, res) => {
@@ -67,13 +64,13 @@ module.exports = (db) => {
     VALUES ($1, $2, true)
     RETURNING *;
     `, [user.id, id])
-      .then((data) => {
-        res.status(200).send(data.rows[0])
-      })
-      .catch((err) => {
-        console.log(err.message)
-        res.sendStatus(400)
-      })
+    .then((data) => {
+      res.status(200).send(data.rows[0])
+    })
+    .catch((err) => {
+      console.log(err.message)
+      res.sendStatus(400)
+    })
   });
 
   router.post("/:id/unlike", (req, res) => {
@@ -93,6 +90,47 @@ module.exports = (db) => {
       })
   });
 
+
+  router.post("/:id/rate", (req, res) => {
+    const id = req.params.id;
+    const user = req.session.user_id;
+    const rating = req.body.rating;
+
+    console.log("routeeee", id, user);
+    console.log("THIS IS THE RAINGTGGGS STARRR: ", rating)
+    console.log(req.body);
+
+    db.query(`
+      INSERT INTO ratings(rating, resource_id, user_id)
+      VALUES ($1, $2, $3)
+      RETURNING *;
+    `, [ rating ,id, user.id])
+    .then((data) => {
+      res.status(200)
+    })
+    .catch((err) => {
+      console.log(err.message)
+      res.sendStatus(400)
+    })
+  });
+
+  router.post("/:id/unrate", (req, res) => {
+    const id = req.params.id;
+    const user = req.session.user_id;
+    const rating = req.body.rating;
+
+    db.query(`
+      DELETE rating FROM ratings
+      WHERE resource_id = $1 and user_id = $2;
+    `, [id, user.id])
+    .then((data) => {
+      res.status(200)
+    })
+    .catch((err) => {
+      console.log(err.message)
+      res.sendStatus(400)
+    })
+  });
 
   return router;
 };
