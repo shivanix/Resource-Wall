@@ -34,7 +34,7 @@ html {
   text-transform: uppercase;
 }
 
-#all-contents #expandedResource .resource-header .rating {
+#all-contents #expandedResource .resource-header .star-rating {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;

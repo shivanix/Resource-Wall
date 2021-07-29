@@ -1,38 +1,3 @@
-// const express = require('express');
-// const router  = express.Router();
-
-// module.exports = (db) => {
-//   router.get("/", (req, res) => {
-//     db.query(`SELECT * FROM resources;`)
-//       .then(results => {
-//         const resources = results.rows;
-//         res.json( resources );
-//       })
-//       .catch(err => {
-//         res
-//           .status(500)
-//           .json({ error: err.message });
-//       });
-//   });
-
-//   router.get("/:id", (req, res) => {
-//     db.query(`
-//     SELECT * FROM resources
-//     WHERE id = $1;`, [req.params.id])
-//       .then(results => {
-//         const resources = results.rows;
-//         res.json( resources );
-//       })
-//       .catch(err => {
-//         res
-//           .status(500)
-//           .json({ error: err.message });
-//       });
-//   });
-
-//   return router;
-// };
-
 const express = require('express');
 const router  = express.Router();
 
@@ -97,13 +62,12 @@ module.exports = (db) => {
   });
 
   //router: /resource/id/comments
-  router.get("/:id/comments", (req, res) =>{
 //extract the id value
 //create query t pull comments of that resource/:id from the
 // db--join q bet resources users comments
-
 //return the result in json
 
+router.get("/:id/comments", (req, res) =>{
 const id = req.params.id;
 console.log("Backend hittttttt");
 console.log("idddd", id);
@@ -129,19 +93,17 @@ ORDER BY comments.created_at ASC;`, [id])
         error: err.message
       });
   });
-
-
   });
 
-  router.post("/comments", (req, res) => {
 
-    // console.log("Before insert");
+
+// console.log("Before insert");
 //extract id value
 // extract the comment from the form
-
 // insert q into saved comments in db associated with that id
-
 //return username of the user that created the comment
+
+router.post("/comments", (req, res) => {
 const id = req.body.resource_id;
 const userID = req.session.user_id.id;
 const comment = req.body.comment;
@@ -168,10 +130,7 @@ db.query(`INSERT INTO comments(resource_id, comment, created_at, user_id)
     .catch((error) => {
       console.log(error.message);
 
-    })
-
-//
-
-  })
+    });
+  });
   return router;
 };
