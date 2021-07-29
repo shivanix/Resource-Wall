@@ -1,5 +1,5 @@
-console.log('hello');
 $(() => {
+  // alert('hello');
 
   const createResource = (resource) => {
     const $resource = $(`
