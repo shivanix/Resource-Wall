@@ -1,6 +1,6 @@
 $(() => {
-      $("#search").change(function() {
-      window.location.href = `/search/${$(this).val()}`
-    })
+  $("#search").change(function() {
+    window.location.href = `/search/${$(this).val()}`
   })
+})
 
