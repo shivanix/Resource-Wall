@@ -15,6 +15,7 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/styles/resource.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/rating.css" type="text/css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
     integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
@@ -24,6 +25,7 @@
     <script src="/scripts/resource.js"></script>
     <script src="/scripts/comments.js"></script>
 
+    <script src="/scripts/ratings.js"></script>
     <script src="/scripts/likes.js"></script>
   </head>
   <body>
@@ -59,7 +61,7 @@
             <div class='tags'>
               <%= resource.tag_3 %>
             </div>
-              <a href="/" class="external-link">Visit Source</a>
+              <a href="<%= resource.resource_url %>" class="external-link">Visit Source</a>
             </div>
 
             <div class="like-button">
@@ -79,18 +81,25 @@
           <input type="hidden" name="resource_id" value="<%= resource.id%>">
           <input type="hidden" name="username" value="<%= username%>">
 
+          <input type="hidden" name="rating" value="<%= -1%>">
+
+
           <textarea id="tx01" name="comment" placeholder="Start typing..."></textarea>
 
-
           <div class="buttons">
-            <div class="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-            </div>
             <button class="submit-comment" type="submit">SEND</button>
+          </div>
+          <div class="star-buttons">
+            <div class="star-rating">
+              <h3>Rate this Resource</h3>
+              <div class="rating">
+                <span class="rating__result"></span>
+               <i class="rating__star far fa-star"></i>
+               <i class="rating__star far fa-star"></i>
+               <i class="rating__star far fa-star"></i>
+               <i class="rating__star far fa-star"></i>
+               <i class="rating__star far fa-star"></i>
+            </div>
           </div>
         </form>
       </div>
