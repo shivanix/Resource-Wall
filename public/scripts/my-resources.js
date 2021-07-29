@@ -1,6 +1,5 @@
 console.log('hello');
 $(() => {
-  // const { getResourcesById, getLikedResources } = require('../../db/resource-queries');
 
   const createResource = (resource) => {
     const $resource = $(`
@@ -39,29 +38,37 @@ $(() => {
     return $resource;
   }
 
-  $.get('/api/resources')
+  $.get('/api/resources/saved')
     .then((resources) => {
-      renderResources(resources);
+      renderSavedResources(resources);
     })
     .catch(err => {
       console.log('err:', err.message)
     })
 
-
-  const renderResources = (resources) => {
-    const $resourceContainer = $('#resources');
+  const renderSavedResources = (savedResources) => {
     const $savedResourceContainer = $('#savedResources');
-
-    // console.log('likedResources', getLikedResources())
-    for (const resource of resources) {
-      const $resource = createResource(resource);
-      $resourceContainer.append($resource);
-    }
-
-    for (const resource of resources) {
+    for (const resource of savedResources) {
       const $resource = createResource(resource);
       $savedResourceContainer.append($resource);
     }
   };
+
+  $.get('/api/resources/liked')
+    .then((likedResources) => {
+      renderLikedResources(likedResources);
+    })
+    .catch(err => {
+      console.log('err:', err.message)
+    })
+
+  const renderLikedResources = (likedResources) => {
+    const $resourceContainer = $('#resources');
+
+    for (const resource of likedResources) {
+      const $resource = createResource(resource);
+      $resourceContainer.append($resource);
+    }
+  }
 
 });
