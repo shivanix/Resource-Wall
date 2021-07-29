@@ -150,30 +150,29 @@ html {
           border: 3px solid #000000;
           padding: .5em;
         }
+
         .rating-send {
+          flex-direction: row;
+          justify-content: space-between;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
 
-          .buttons {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            border: indianred 2px;
+          .submit-comment {
+            cursor: pointer;
+            padding:0.3em 2em;
+            border-radius:2em;
+            border: 4px solid #000000;
+            box-sizing: border-box;
+            text-decoration:none;
 
-            .submit-comment {
-              cursor: pointer;
-              padding:0.3em 1.2em;
-              border-radius:2em;
-              border: 4px solid #000000;
-              box-sizing: border-box;
-              text-decoration:none;
+            color:#FFFFFF;
+            background-color: #000000;
 
-              color:#FFFFFF;
-              background-color: #000000;
-
-              text-align: center;
-              justify-content: center;
-              transition: all 0.2s;
-            }
+            text-align: center;
+            justify-content: center;
+            transition: all 0.2s;
           }
         }
       }

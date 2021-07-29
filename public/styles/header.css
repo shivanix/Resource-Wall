@@ -4,7 +4,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 2em 0 2em;
-  background: #f2f2f2;
+  background: #00c4c5;
   height: 10em;
 }
 
@@ -16,10 +16,10 @@ header .left-side .logo {
   width: 5em;
   height: 5em;
   /* Logo size will change later*/
-  border: 2px #000000 solid;
+  border: 2px #ffbd26 solid;
   border-radius: 4em;
   line-height: 3em;
-  background: #000000;
+  background: #ffbd26;
   margin-right: 1em;
 }
 
@@ -30,7 +30,8 @@ header .left-side .app-name {
   font-size: 3.75em;
   line-height: 1.25em;
   text-decoration: none;
-  color: #000000;
+  text-shadow: .08em .08em #56a7a7;
+  color: #ffffff;
 }
 
 header .nav-links {
@@ -43,7 +44,7 @@ header .nav-links {
 header .nav-links h2 {
   font-family: Futura;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 100;
   color: #000000;
   margin-top: 0;
@@ -51,7 +52,8 @@ header .nav-links h2 {
 }
 
 header .nav-links h2 a {
-  color: #3f3f3f;
+  text-transform: uppercase;
+  color: #212722;
   text-decoration: none;
 }
 
@@ -70,11 +72,11 @@ header .nav-links .bottom-links .create {
   cursor: pointer;
   padding: 0.3em 1.2em;
   border-radius: 2em;
-  border: 4px solid #000000;
+  border: 4px solid #4dd4d5;
   box-sizing: border-box;
   text-decoration: none;
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #4dd4d5;
   text-align: center;
   justify-content: center;
   margin: 0 1em 0 1em;
@@ -87,11 +89,11 @@ header .nav-links .bottom-links .my-resources {
   cursor: pointer;
   padding: 0.3em 1.2em;
   border-radius: 2em;
-  border: 4px solid #000000;
+  border: 4px solid #4dd4d5;
   box-sizing: border-box;
   text-decoration: none;
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #4dd4d5;
   text-align: center;
   justify-content: center;
   transition: all 0.2s;
@@ -103,11 +105,11 @@ header .nav-links .bottom-links .logout {
   cursor: pointer;
   padding: 0.3em 1.2em;
   border-radius: 2em;
-  border: 4px solid #000000;
+  border: 4px solid #4dd4d5;
   box-sizing: border-box;
   text-decoration: none;
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #4dd4d5;
   text-align: center;
   margin: 0 0 0 1em;
   justify-content: center;
