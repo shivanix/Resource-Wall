@@ -20,6 +20,7 @@
 
 
     <script src="/scripts/search.js"></script>
+    <script src="/scripts/search-redirect.js"></script>
   </head>
 
   <body>
@@ -31,7 +32,11 @@
           <option value="animals">Animals</option>
           <option value="arts-and-crafts">Arts and Crafts</option>
           <option value="education">Education</option>
+<<<<<<< HEAD
           <option value="food-and-drinks">Food and Drinks</option>
+=======
+          <option value="food-and-drink">Food and Drink</option>
+>>>>>>> 971649f67315f8419dc862ab3161b703df8c90bf
           <option value="music">Music</option>
           <option value="other">Other</option>
         </select>
@@ -39,7 +44,7 @@
       <section class='resource-row'>
         <div class='my-resources-container'>
           <div class='my-resources-header'>
-            <h2>Dynamic Category</h2>
+            <h2><%= title %></h2>
           </div>
           <div id="categorizedResources"></div>
         </div>
