@@ -1,5 +1,4 @@
 $(() => {
-  // alert('hello');
 
   const createResource = (resource) => {
     const $resource = $(`
