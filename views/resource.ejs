@@ -37,12 +37,12 @@
             <h3><%= resource.category %></h3>
             <h1><%= resource.title %></h1>
           </div>
-          <div class="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+          <div class="all-rating">
+            <i class="average__rating far fa-star"></i>
+            <i class="average__rating far fa-star"></i>
+            <i class="average__rating far fa-star"></i>
+            <i class="average__rating far fa-star"></i>
+            <i class="average__rating far fa-star"></i>
           </div>
         </div>
         <div class="contents">
@@ -73,45 +73,41 @@
           </div>
         </div>
       </section>
+
     <section id="comments-section">
       <div class="comment-form">
         <h3>Leave a Comment</h3>
-
         <form id="form-id">
           <input type="hidden" name="resource_id" value="<%= resource.id%>">
           <input type="hidden" name="username" value="<%= username%>">
-
-          <input type="hidden" name="rating" value="<%= -1%>">
-
-
           <textarea id="tx01" name="comment" placeholder="Start typing..."></textarea>
-
-          <div class="buttons">
-            <button class="submit-comment" type="submit">SEND</button>
-          </div>
-          <div class="star-buttons">
-            <div class="star-rating">
-              <h3>Rate this Resource</h3>
-              <div class="rating">
-                <span class="rating__result"></span>
-               <i class="rating__star far fa-star"></i>
-               <i class="rating__star far fa-star"></i>
-               <i class="rating__star far fa-star"></i>
-               <i class="rating__star far fa-star"></i>
-               <i class="rating__star far fa-star"></i>
+          <div class="rating-send">
+            <div class="star-buttons">
+              <div class="star-rating">
+                <div class="rating">
+                  <span class="rating__result"></span>
+                   <i class="rating__star far fa-star"></i>
+                   <i class="rating__star far fa-star"></i>
+                   <i class="rating__star far fa-star"></i>
+                   <i class="rating__star far fa-star"></i>
+                   <i class="rating__star far fa-star"></i>
+                  </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="submit-comment" type="submit">SEND</button>
             </div>
           </div>
         </form>
       </div>
       <div class="comments">
-        <article class="comments-container">
-          <h4>Hey I was the first comment</h4>
+        <!-- <article class="comments-container">
           <div class="comment">
             <span>Topping sweet dragée pudding. Dessert pie pastry gummi bears donut soufflé soufflé.</span>
           </div>
           <div class="username">Joe.Alwyn</div>
           <div class="timestamp">Long time ago</div>
-        </article>
+        </article> -->
       </div>
     </section>
     </main>

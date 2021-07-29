@@ -1,15 +1,4 @@
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
-  background: none;
-  display: flex;
-  flex-direction: column;
   font-family: Noto Sans;
 }
 
@@ -19,64 +8,87 @@ body .search-bar {
   margin: 2em 0 2em 0;
 }
 
-body .main_container {
+body #home_container {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-content: center;
   padding: 0 2em 0 2em;
-  border: greenyellow 2px solid;
 }
 
-body .main_container .box {
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: column;
+body #home_container .box {
+  max-width: 45em;
   text-align: center;
-  margin-bottom: 3em;
-  border: indianred 2px;
+  margin-bottom: 2em;
+  margin-right: 1em;
 }
 
-@media screen and (min-width: 950px) {
-  body .main_container .box {
-    flex-basis: 45%;
+@media screen and (min-width: 1400px) {
+  body #home_container .box {
+    max-width: 20em;
+    margin-right: 2em;
   }
 }
 
-@media screen and (min-width: 1300px) {
-  body .main_container .box {
-    flex-basis: 30%;
-  }
-}
-
-@media screen and (min-width: 1850px) {
-  body .main_container .box {
-    flex-basis: 25%;
-  }
-}
-
-body .main_container .box .resource-thumbnail {
+body #home_container .box .mini-resource {
   border: none;
+  width: auto;
   border-radius: 1em;
+  overflow: hidden;
 }
 
-body .main_container .box .text h3 {
-  font-size: 1.5em;
+body #home_container .box .mini-resource .resource-thumbnail {
+  width: 100%;
+}
+
+body #home_container .box .text h3 {
+  font-size: 1.45em;
   margin: .75em 0 .75em 0;
-  border: #b300ff 2px solid;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  border: #000000 2px solid;
+  border-radius: 2em;
+  background: #000000;
+  color: #FFFF;
 }
 
-body .main_container .box .text p {
+body #home_container .box .text p {
   min-height: 4em;
+  font-size: 1.25em;
   text-align: left;
-  border: #ff006f 2px solid;
 }
 
-body .main_container .box .buttons {
-  border: #ffea00 2px solid;
+body #home_container .box .buttons .search-cat {
+  text-align: center;
+  padding: .25em 0 .25em 0;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: .5em;
+  background: #000000;
+  border: #000000 2px solid;
+  border-radius: 2em;
 }
 
-body .main_container .box .buttons a {
-  flex-direction: column;
+body #home_container .box .buttons .search-cat a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+body #home_container .box .buttons .read-more {
+  text-align: center;
+  padding: .25em 0 .25em 0;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #000000;
+  border: #000000 2px solid;
+  border-radius: 2em;
+}
+
+body #home_container .box .buttons .read-more a {
+  text-decoration: none;
+  color: #FFF;
 }

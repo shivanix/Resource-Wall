@@ -1,6 +1,6 @@
 .rating {
   position: relative;
-  width: 180px;
+  width: 15em;
   background: transparent;
   display: flex;
   justify-content: center;
@@ -9,7 +9,7 @@
   padding: 5px;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0 0 2px #b3acac;
+
 }
 .rating__result {
   position: absolute;
@@ -17,9 +17,10 @@
   left: 0;
   transform: translateY(-10px) translateX(-5px);
   z-index: -9;
-  font: 3em Arial, Helvetica, sans-serif;
+  font: 2em Noto Sans;
   color: #ebebeb8e;
   pointer-events: none;
+  padding-left: 1em;
 }
 .rating__star {
   font-size: 1.3em;
