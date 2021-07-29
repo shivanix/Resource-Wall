@@ -9,6 +9,7 @@
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
 
+
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
@@ -19,6 +20,7 @@
     <script src="/scripts/resource.js"></script>
     <script src="/scripts/comments.js"></script>
 
+    <script src="/scripts/likes.js"></script>
   </head>
   <body>
     <%- include('partials/header') %>
@@ -55,9 +57,13 @@
             </div>
               <a href="/" class="external-link">Visit Source</a>
             </div>
+
             <div class="like-button">
-              <span class="fas fa-heart"></i>
+              <i class="<%= like ? 'fas fa-heart' : 'far fa-heart' %>"></i>
             </div>
+            <!-- <div class="is-unliked">
+              <i class="far fa-heart"></i>
+            </div> -->
           </div>
         </div>
       </section>
