@@ -10,13 +10,16 @@ html {
   display: flex;
   flex-direction: row;
   font-family: Noto Sans;
+  width: 100%;
+  border: cyan 2px solid;
 }
 
 #all-contents #expandedResource {
   display: flex;
   flex-direction: column;
   padding: 0 2em 0 4em;
-  max-width: 65%;
+  max-height: 65%;
+  border: fuchsia 2px solid;
 }
 
 #all-contents #expandedResource .resource-header {

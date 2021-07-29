@@ -1,15 +1,4 @@
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
-  background: none;
-  display: flex;
-  flex-direction: column;
   font-family: Noto Sans;
 }
 
@@ -19,7 +8,7 @@ body .search-bar {
   margin: 2em 0 2em 0;
 }
 
-body .main_container {
+body #home_container {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -29,54 +18,55 @@ body .main_container {
   border: greenyellow 2px solid;
 }
 
-body .main_container .box {
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: column;
+body #home_container .box {
   text-align: center;
   margin-bottom: 3em;
-  border: indianred 2px;
+  flex-basis: 100%;
 }
 
 @media screen and (min-width: 950px) {
-  body .main_container .box {
-    flex-basis: 45%;
+  body #home_container .box {
+    max-width: 20em;
+    flex-basis: 40%;
+    border: blue 2px solid;
   }
 }
 
 @media screen and (min-width: 1300px) {
-  body .main_container .box {
+  body #home_container .box {
     flex-basis: 30%;
   }
 }
 
 @media screen and (min-width: 1850px) {
-  body .main_container .box {
-    flex-basis: 25%;
+  body #home_container .box {
+    flex-basis: 20%;
   }
 }
 
-body .main_container .box .resource-thumbnail {
+body #home_container .box .mini-resource {
   border: none;
+  width: auto;
   border-radius: 1em;
+  overflow: hidden;
 }
 
-body .main_container .box .text h3 {
+body #home_container .box .text h3 {
   font-size: 1.5em;
   margin: .75em 0 .75em 0;
   border: #b300ff 2px solid;
 }
 
-body .main_container .box .text p {
+body #home_container .box .text p {
   min-height: 4em;
   text-align: left;
   border: #ff006f 2px solid;
 }
 
-body .main_container .box .buttons {
+body #home_container .box .buttons {
   border: #ffea00 2px solid;
 }
 
-body .main_container .box .buttons a {
+body #home_container .box .buttons a {
   flex-direction: column;
 }

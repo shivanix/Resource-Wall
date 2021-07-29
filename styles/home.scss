@@ -1,14 +1,4 @@
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
-  background: none;
-  display: flex;
-  flex-direction: column;
   font-family: Noto Sans;
 
   .search-bar {
@@ -17,7 +7,7 @@ body {
     margin: 2em 0 2em 0;
   }
 
-  .main_container{
+  #home_container{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -27,15 +17,13 @@ body {
     border: greenyellow 2px solid;
 
     .box {
-      flex-wrap: wrap;
-      display: flex;
-      flex-direction: column;
       text-align: center;
       margin-bottom: 3em;
-      border: indianred 2px;
+      flex-basis: 100%;
 
       @media screen and (min-width: 950px) {
-         flex-basis: 45%;
+        flex-basis: 40%;
+        border:blue 2px solid;
       }
 
       @media screen and (min-width: 1300px) {
@@ -43,12 +31,14 @@ body {
       }
 
       @media screen and (min-width: 1850px) {
-        flex-basis: 25%;
+        flex-basis: 20%;
       }
 
-      .resource-thumbnail {
+      .mini-resource {
         border: none;
+        width: auto;
         border-radius: 1em;
+        overflow:hidden;
       }
 
       .text {
@@ -74,7 +64,8 @@ body {
       }
     }
   }
-  }
+
+}
 
 
 
