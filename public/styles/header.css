@@ -52,7 +52,6 @@ header .nav-links h2 {
 }
 
 header .nav-links h2 a {
-  text-transform: uppercase;
   color: #212722;
   text-decoration: none;
 }

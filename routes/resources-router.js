@@ -1,5 +1,6 @@
 const express = require('express');
 const router  = express.Router();
+const moment = require('moment');
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
@@ -109,33 +110,38 @@ ORDER BY comments.created_at ASC;`, [id])
 */
 
 
-router.post("/comments", (req, res) => {
-const id = req.body.resource_id;
-const userID = req.session.user_id.id;
-const comment = req.body.comment;
-const timestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
+  router.post("/comments", (req, res) => {
+  const id = req.body.resource_id;
+  const userID = req.session.user_id.id;
+  const comment = req.body.comment;
+  // const timestamp = new Date(Date.now()).toISOString().slice(0, 19).replace('T', ' ');
+
+  const timestamp = moment().format('YYYY-MM-DD HH:mm:ss');
 
 
-db.query(`INSERT INTO comments(resource_id, comment, created_at, user_id)
-    VALUES ($1, $2, $3, $4)
-    RETURNING *;`, [ id, comment, timestamp, userID])
-    .then((data) => {
+  db.query(`INSERT INTO comments(resource_id, comment, created_at, user_id)
+      VALUES ($1, $2, $3, $4)
+      RETURNING *;`, [ id, comment, timestamp, userID])
+      .then((data) => {
 
+        db.query(`SELECT username FROM users
+        WHERE id = $1`,[userID])
+        .then((result) =>{
+          const newComment = data.rows[0];
+          newComment.user_id = userID;
+          newComment['username'] = result.rows[0].username;
+          newComment.created_at = timestamp;
 
-      db.query(`SELECT username FROM users
-      WHERE id = $1`,[userID])
-      .then((result) =>{
-        const newComment = data.rows[0];
-        newComment.user_id = userID;
-        newComment['username'] = result.rows[0].username;
-        res.send(newComment);
-      })
+          // console.log("RESULTS ROW CREATED AT", result.rows[0])
+          res.send(newComment);
+        })
 
-      })
-    .catch((error) => {
-      console.log(error.message);
+        })
+      .catch((error) => {
+        console.log(error.message);
 
+      });
     });
-  });
+
   return router;
 };

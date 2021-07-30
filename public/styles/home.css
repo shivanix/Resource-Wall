@@ -72,6 +72,10 @@ body #home_container .box .buttons .search-cat {
   border-radius: 2em;
 }
 
+body #home_container .box .buttons .search-cat .category {
+  color: #FFF;
+}
+
 body #home_container .box .buttons .search-cat a {
   text-decoration: none;
   color: #FFF;

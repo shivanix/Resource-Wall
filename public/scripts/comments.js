@@ -56,6 +56,8 @@ const createCommentElement = function(commentData) {
 // console.log("On page loaddddddddddddddd");
 // console.log("rrriogrigrigrigrgi", commentData);
 
+
+
   const htmlMarkup = ` <article class="comments-container">
   <div class="comment">
     <span>${commentData.comment}</span>
