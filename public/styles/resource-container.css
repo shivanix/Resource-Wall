@@ -53,9 +53,14 @@ main .resource-container .resource-thumbnail {
 }
 
 main .resource-container .resource-title {
-  font-size: 1.25em;
+  font-size: 1.45em;
   font-weight: 700;
+  color: #FFFFFF;
   text-transform: uppercase;
+  border: #212722 2px solid;
+  padding: .2em 0 .2em 0;
+  background: #212722;
+  border-radius: 2em;
   margin: .5em 0 .5em 0;
 }
 
@@ -69,10 +74,11 @@ main .resource-container .category {
   text-align: center;
   margin-top: 1em;
   padding: .25em 0 .25em 0;
-  font-size: 1em;
+  font-size: 1.05em;
   font-weight: 700;
   text-transform: uppercase;
-  border: #000000 2px solid;
+  color: #212722;
+  border: #212722 2px solid;
   border-radius: 2em;
 }
 
@@ -85,10 +91,12 @@ main .resource-container .tags-container {
 
 main .resource-container .tags-container .tag {
   text-transform: lowercase;
-  border: #000000 2px solid;
+  border: #212722 2px solid;
+  background: #212722;
+  color: #FFFFFF;
   border-radius: 2em;
   width: 33%;
-  font-size: .8em;
+  font-size: .75em;
   margin: .5em 0 .5em 0;
 }
 
@@ -98,8 +106,8 @@ main .resource-container .read-more {
   font-size: 1em;
   font-weight: 700;
   text-transform: uppercase;
-  background: #000000;
-  border: #000000 2px solid;
+  background: #212722;
+  border: #212722 2px solid;
   border-radius: 2em;
 }
 

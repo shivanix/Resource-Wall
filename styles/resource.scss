@@ -10,12 +10,15 @@ html {
   flex-direction: row;
   font-family: Noto Sans;
   width: 100%;
+  justify-content: space-between;
+  padding: 4em;
+  color: #212722;
 
   #expanded-resource {
     display: flex;
     flex-direction: column;
     padding: 0 2em 0 4em;
-    max-width: 65%;
+    max-width: 60%;
 
     .resource-header {
       display: flex;
@@ -28,6 +31,11 @@ html {
 
         h3 {
           text-transform: uppercase;
+          font-size: 2em;
+        }
+
+        h1 {
+          font-size: 2.75em;
         }
       }
 
@@ -39,10 +47,6 @@ html {
 
         .average__rating {
           font-size: 1.5em;
-          cursor: pointer;
-        }
-        .average__rating:hover {
-          filter: drop-shadow(1px 1px 4px gold);
         }
 
       }
@@ -64,7 +68,7 @@ html {
         font-size: 1.25em;
         padding: 1.25em;
         line-height: 1.55em;
-        border: 3px solid #000000;
+        border: 3px solid #212722;
       }
 
       .more-containers {
@@ -80,26 +84,29 @@ html {
           width: 90%;
 
           .tags {
+            flex-direction: row;
             font-size: 1.25em;
             border-radius:1.5em;
-            line-height: 2em;
+            line-height: 1.5em;
             text-transform: uppercase;
             text-align: center;
             margin-top: .5em;
-            border: 3px solid #000000;
+            border: 4px solid #4dd4d5;
             color:#FFFFFF;
-            background-color: #000000;
+            background-color: #4dd4d5;
           }
 
           .external-link {
+            font-family: Futura;
             font-size: 1.25em;
             border-radius:1.5em;
             line-height: 1.55em;
             text-transform: uppercase;
             text-decoration: none;
-            color: #000000;
+            color: #fff;
             text-align: center;
-            border: 3px solid #000000;
+            border: #ffbd26 2px solid;
+            background: #ffbd26;
             margin-top: .5em;
           }
         }
@@ -130,8 +137,8 @@ html {
   #comments-section {
     display: flex;
     flex-direction: column;
-    padding: 3em 2em 0 1em;
-    width: 35%;
+    padding: 5em 2em 0 1em;
+    width: 36%;
 
     .comment-form {
       h3 {
@@ -147,8 +154,12 @@ html {
           min-height: 8em;
           border-radius:1.5em;
           line-height: 1.55em;
-          border: 3px solid #000000;
+          border: 3px solid #212722;
           padding: .5em;
+        }
+
+        textarea:focus {
+          outline: none;
         }
 
         .rating-send {
@@ -163,12 +174,12 @@ html {
             cursor: pointer;
             padding:0.3em 2em;
             border-radius:2em;
-            border: 4px solid #000000;
+            border: 4px solid #212722;
             box-sizing: border-box;
             text-decoration:none;
 
             color:#FFFFFF;
-            background-color: #000000;
+            background-color: #212722;
 
             text-align: center;
             justify-content: center;
@@ -191,7 +202,7 @@ html {
         font-size: 1em;
         border-radius:1.25em;
         line-height: 1.55em;
-        border: 3px solid #000000;
+        border: 3px solid #212722;
         padding: .5em;
         word-break: break-all;
       }

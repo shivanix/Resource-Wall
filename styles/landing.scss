@@ -15,7 +15,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1em 4em 0 4em;
+    padding: 4em 4em 0 4em;
 
     .left-side {
       display: flex;
@@ -23,22 +23,16 @@ body {
       justify-content: flex-start;
     }
 
-    .logo {
-      width: 60px;
-      height: 60px;
-      /* Logo size will change later*/
-      border: 2px yellowgreen solid;
-      margin-right: 1em;
-    }
 
     .app-name {
       font-family: Futura;
       font-style: normal;
       font-weight: bold;
-      font-size: 40px;
-      line-height: 53px;
-
-      color: #000000;
+      font-size: 3.75em;
+      line-height: 1.25em;
+      text-decoration: none;
+      text-shadow: .08em .08em #56a7a7;
+      color:#00c4c5;
     }
 
     .buttons {
@@ -52,23 +46,23 @@ body {
       padding:0.3em 1.2em;
       margin:0 0.3em 0.3em 0;
       border-radius:2em;
-      border: 4px solid #000000;
+      border: 4px solid #4dd4d5;
       box-sizing: border-box;
       text-decoration:none;
       font-family:Futura;
       font-size: 1em;
       color:#FFFFFF;
-      background-color: #000000;
+      background-color: #4dd4d5;
       text-align: center;
       justify-content: center;
       transition: all 0.2s;
     }
 
     .login-button:hover {
-      color: #000000;
+      color: #4dd4d5;
       border-radius:2em;
-      border: 4px solid #000000;
-      border-color: #000000;
+      border: 4px solid #4dd4d5;
+      border-color: #4dd4d5;
       background-color: transparent;
       transition: background-color ease 575ms;
     }
@@ -78,23 +72,23 @@ body {
       padding:0.3em 1.2em;
       margin:0 0.3em 0.3em 0;
       border-radius:2em;
-      border: 4px solid #000000;
+      border: 4px solid #4dd4d5;
       box-sizing: border-box;
       text-decoration:none;
       font-family:Futura;
       font-size: 1em;
       color:#FFFFFF;
-      background-color: #000000;
+      background-color: #4dd4d5;
       text-align: center;
       justify-content: center;
       transition: all 0.2s;
     }
 
     .signup-button:hover {
-      color: #000000;
+      color: #4dd4d5;
       border-radius:2em;
-      border: 4px solid #000000;
-      border-color: #000000;
+      border: 4px solid #4dd4d5;
+      border-color: #4dd4d5;
       background-color: transparent;
       transition: background-color ease 575ms;
     }
@@ -110,7 +104,7 @@ body {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      margin-top: 10%;
+      margin-top: 5%;
       padding-bottom: 1.5em;
 
       .image-1 {
@@ -145,17 +139,20 @@ body {
       align-items: center;
       text-align: center;
       margin-top: .25em;
-      margin-bottom: .25em;
+      margin-bottom: .1em;
 
-      color: #006D5B;
+      color:#0bc1c1;
     }
 
     .secondary-login {
-      align-items: center;
-      width: 60px;
-      height: 60px;
+      width: 5em;
+      height: 5em;
       /* Logo size will change later*/
-      border: 2px yellowgreen solid;
+      border: 2px #ffbd26 solid;
+      border-radius: 4em;
+      line-height: 3em;
+      background: #ffbd26;
+      margin-right: 1em;
     }
   }
 }

@@ -34,7 +34,7 @@ body {
     margin-left: .25em;
     padding: 7em 2em 7em 2em;
 
-    background: #F3F3F3;
+    background: #f3f3f3;
     border-radius: 25px;
 
     .logo {
@@ -43,7 +43,9 @@ body {
       width: 60px;
       height: 60px;
       /* Logo size will change later*/
-      border: 2px yellowgreen solid;
+      border-radius: 4em;
+      border: 2px #ffbd26 solid;
+      background: #ffbd26;
     }
 
     h1 {
@@ -51,7 +53,7 @@ body {
       font-style: normal;
       font-size: 1.75em;
       font-weight: 100;
-      color: #000000;
+      color: #00c4c5;
     }
 
     .form-inline {

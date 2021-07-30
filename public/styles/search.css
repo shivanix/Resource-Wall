@@ -9,43 +9,39 @@ html {
 .search-bar {
   display: flex;
   justify-content: center;
-  margin: 2em 0 1em 0;
+  margin: 2em 0 2em 0;
+}
+
+.search-bar .search {
+  border-radius: 2em;
+  width: 55%;
+  height: 2em;
+  font-size: 1.5em;
+  padding-left: 17em;
+  color: #757878;
+  border-color: #c4e0dc;
+}
+
+.search-bar .search option {
+  text-align-last: right;
 }
 
 .resource-row {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.resource-row .liked-resources-container {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-
-.resource-row .liked-resources-container .liked-header {
-  display: flex;
-  flex-direction: column;
-}
-
-.resource-row .liked-resources-container .liked-pair {
-  display: flex;
-  flex-direction: column;
-}
-
-.resource-row .liked-resources-container .liked-pair #resources {
-  display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .resource-row .my-resources-container {
-  margin-right: 2em;
-  width: 25%;
+  display: flex;
+  flex-direction: row;
+  width: 30;
 }
 
 .resource-row .my-resources-container .my-resources-header {
-  padding-left: 2em;
   display: flex;
-  flex-direction: column;
+}
+
+.resource-row .my-resources-container #categorizedResources {
+  display: flex;
+  flex-wrap: wrap;
 }

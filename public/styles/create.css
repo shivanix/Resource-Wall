@@ -12,6 +12,10 @@
   padding-top: 1em;
 }
 
+#main-block .main-block-header h1 {
+  color: #212722;
+}
+
 #main-block #details {
   display: flex;
   flex-direction: column;

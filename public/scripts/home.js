@@ -46,7 +46,7 @@ $(() => {
     for (const resource of resources) {
       console.log('$$$$$$$$$$$$$$$$$$$$2222', resources);
       const $resource = createResource(resource);
-      $resourceContainer.append($resource);
+      $resourceContainer.prepend($resource);
     }
   };
 
