@@ -25,6 +25,7 @@ body .message {
   font-size: 4.5em;
   text-align: right;
   line-height: 1.10em;
+  color: #00c4c5;
   width: auto;
 }
 
@@ -89,21 +90,21 @@ body .login-container .grid .login-button {
   cursor: pointer;
   padding: 0.3em 1.2em;
   border-radius: 2em;
-  border: 4px solid #000000;
+  border: 4px solid #00c4c5;
   box-sizing: border-box;
   text-decoration: none;
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #00c4c5;
   text-align: center;
   justify-content: center;
   transition: all 0.2s;
 }
 
 body .login-container .grid .login-button:hover {
-  color: #000000;
+  color: #00c4c5;
   border-radius: 2em;
-  border: 4px solid #000000;
-  border-color: #000000;
+  border: 4px solid #00c4c5;
+  border-color: #00c4c5;
   background-color: transparent;
   transition: background-color ease 550ms;
 }

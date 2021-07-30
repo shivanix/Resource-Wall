@@ -24,6 +24,7 @@ body .message {
   text-align: center;
   line-height: 1.10em;
   margin-bottom: .25em;
+  color: #00c4c5;
 }
 
 body .signup-container {
@@ -45,14 +46,16 @@ body .signup-container .logo {
   margin-top: 2.75em;
   margin-bottom: 2.3em;
   /* Logo size will change later*/
-  border: 2px yellowgreen solid;
+  border-radius: 4em;
+  border: 2px #ffbd26 solid;
+  background: #ffbd26;
 }
 
 body .signup-container .form-inline {
   font-family: Futura;
   font-style: normal;
   font-weight: 100;
-  color: #000000;
+  color: #00c4c5;
 }
 
 body .signup-container .grid {
@@ -72,22 +75,22 @@ body .signup-container .signup-button {
   cursor: pointer;
   padding: 0.3em 1.2em;
   border-radius: 2em;
-  border: 4px solid #000000;
+  border: 4px solid #00c4c5;
   box-sizing: border-box;
   text-decoration: none;
   margin-top: 2.75em;
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #00c4c5;
   text-align: center;
   justify-content: center;
   transition: all 0.2s;
 }
 
 body .signup-container .signup-button:hover {
-  color: #000000;
+  color: #00c4c5;
   border-radius: 2em;
-  border: 4px solid #000000;
-  border-color: #000000;
+  border: 4px solid #00c4c5;
+  border-color: #00c4c5;
   background-color: transparent;
   transition: background-color ease 550ms;
 }

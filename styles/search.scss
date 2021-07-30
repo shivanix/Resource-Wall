@@ -27,7 +27,9 @@ html {
 
 .resource-row {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  padding-left: 5em;
 
   .my-resources-container {
     display: flex;
