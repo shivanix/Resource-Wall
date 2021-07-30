@@ -38,8 +38,8 @@ $(() => {
     return $resource;
   }
 
-  if (window.location.pathname === '/search/music') {
-  $.get('/api/search/music')
+  if (window.location.pathname === '/search/Music') {
+  $.get('/api/search/Music')
     .then((resources) => {
       renderMusicResources(resources);
     })
@@ -58,8 +58,8 @@ $(() => {
   };
   }
 
-  if (window.location.pathname === '/search/food-and-drink') {
-  $.get('/api/search/food-and-drink')
+  if (window.location.pathname === '/search/Food%20and%20Drink') {
+  $.get('/api/search/Food%20and%20Drink')
   .then((resources) => {
     renderFoodAndDrinkResources(resources);
   })
@@ -76,8 +76,8 @@ const renderFoodAndDrinkResources = (resources) => {
 };
   }
 
-  if (window.location.pathname === '/search/arts-and-crafts') {
-    $.get('/api/search/arts-and-crafts')
+  if (window.location.pathname === '/search/Arts%20and%20Crafts') {
+    $.get('/api/search/Arts%20and%20Crafts')
       .then((resources) => {
         renderArtsAndCraftsResources(resources);
       })
@@ -94,8 +94,8 @@ const renderFoodAndDrinkResources = (resources) => {
     };
     }
 
-    if (window.location.pathname === '/search/education') {
-      $.get('/api/search/education')
+    if (window.location.pathname === '/search/Education') {
+      $.get('/api/search/Education')
         .then((resources) => {
           renderEducationResources(resources);
         })
@@ -112,8 +112,8 @@ const renderFoodAndDrinkResources = (resources) => {
       };
       }
 
-      if (window.location.pathname === '/search/animals') {
-        $.get('/api/search/animals')
+      if (window.location.pathname === '/search/Animals') {
+        $.get('/api/search/Animals')
           .then((resources) => {
             renderAnimalsResources(resources);
           })
@@ -130,8 +130,8 @@ const renderFoodAndDrinkResources = (resources) => {
         };
         }
 
-        if (window.location.pathname === '/search/other') {
-          $.get('/api/search/other')
+        if (window.location.pathname === '/search/Other') {
+          $.get('/api/search/Other')
             .then((resources) => {
               renderOtherResources(resources);
             })
