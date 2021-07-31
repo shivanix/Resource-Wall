@@ -6,12 +6,6 @@ module.exports = (db) => {
     res.render("register");
       })
 
-  /* ERRORS:
-    If user already exists (username or email) -- ERROR
-    If input password does not match requirements (>= 8 characters) -- ERROR -- STRETCH
-    If email or password is empty -- ERROR
-    Else -- none of the errors happened, the details will be stored to users: email, username, password will be stored in the database
-  */
   router.post("/", (req, res) => {
     const user = req.body;
 
@@ -57,12 +51,10 @@ module.exports = (db) => {
         `, [user.email, user.username, user.password])
       .then((data) => {
         const newUser = data.rows[0];
-        // console.log("THIS IS NEWUSER: ". newUser) // getting undefined here
         if (!newUser) {
           res.send("Error: ", error.message);
         } else {
           req.session.user_id = newUser;
-          // console.log("##############", newUser)
           res.redirect("/home");
         }
       })
