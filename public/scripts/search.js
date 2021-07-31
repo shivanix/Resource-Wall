@@ -1,7 +1,7 @@
 console.log('hello search');
 $(() => {
 
-  const createResource = (resource) => {
+  const createResource = (resource) => { //dynamically creates HTML based on given resource
     const $resource = $(`
     <div class='resource-container' id='rc1'>
       <div>
@@ -38,7 +38,8 @@ $(() => {
       return $resource;
     }
 
-    if (window.location.pathname === '/search/animals') {
+    //comments for this query and function, apply to the below functions by category
+    if (window.location.pathname === '/search/animals') { //filter and render search results based on given resource category
       $.get('/api/search/animals')
       .then((resources) => {
         renderAnimalsResources(resources);
@@ -47,11 +48,11 @@ $(() => {
         console.log('err:', err.message)
       })
 
-      const renderAnimalsResources = (resources) => {
+      const renderAnimalsResources = (resources) => { //renders only Animals resources
         const $animalsResourceContainer = $('#categorizedResources');
 
-        resources.reverse().forEach(resource => {
-          $animalsResourceContainer.append(createResource(resource));
+        resources.reverse().forEach(resource => { //reverses resources to render newest resources first
+          $animalsResourceContainer.append(createResource(resource)); //append tweet to container
         })
       };
     }
@@ -111,7 +112,7 @@ $(() => {
     };
   }
 
-    if (window.location.pathname === '/search/music') {
+  if (window.location.pathname === '/search/music') {
   $.get('/api/search/music')
     .then((resources) => {
       renderMusicResources(resources);

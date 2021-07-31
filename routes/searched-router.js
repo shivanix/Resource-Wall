@@ -3,7 +3,6 @@ const router  = express.Router();
 
 module.exports = (db) => {
 
-  //Need to sql inject onclick category
   router.get("/animals", (req, res) => {
     db.query(`SELECT * FROM resources
     WHERE category = $1;`, ['Animals'])
@@ -17,7 +16,6 @@ module.exports = (db) => {
       .json({ error: err.message });
     });
   });
-
 
   router.get("/arts-and-crafts", (req, res) => {
     db.query(`SELECT * FROM resources
@@ -61,33 +59,33 @@ module.exports = (db) => {
     });
   });
 
-    router.get("/music", (req, res) => {
-      db.query(`SELECT * FROM resources
-      WHERE category = $1;`, ['Music'])
-        .then(results => {
-          const resources = results.rows;
-          res.json( resources );
-        })
-        .catch(err => {
-          res
-            .status(500)
-            .json({ error: err.message });
-        });
-    });
-
-    router.get("/other", (req, res) => {
-      db.query(`SELECT * FROM resources
-      WHERE category = $1;`, ['Other'])
+  router.get("/music", (req, res) => {
+    db.query(`SELECT * FROM resources
+    WHERE category = $1;`, ['Music'])
       .then(results => {
         const resources = results.rows;
         res.json( resources );
       })
       .catch(err => {
         res
-        .status(500)
-        .json({ error: err.message });
+          .status(500)
+          .json({ error: err.message });
       });
-    });
+  });
 
-    return router;
+  router.get("/other", (req, res) => {
+    db.query(`SELECT * FROM resources
+    WHERE category = $1;`, ['Other'])
+    .then(results => {
+      const resources = results.rows;
+      res.json( resources );
+    })
+    .catch(err => {
+      res
+      .status(500)
+      .json({ error: err.message });
+    });
+  });
+
+  return router;
   };

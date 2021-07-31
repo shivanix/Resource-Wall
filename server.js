@@ -41,7 +41,6 @@ app.use(cookieSession({
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
-const widgetsRoutes = require("./routes/widgets");
 
 const createResourceRoutes = require("./routes/create");
 const resourceRoutes = require("./routes/resource");
@@ -57,26 +56,26 @@ const logoutRoutes = require("./routes/logout");
 const resourcesRoutes = require("./routes/resources-router");
 const searchedResourcesRoutes = require("./routes/searched-router");
 
-// Mount all resource routes
-// Note: Feel free to replace the example routes below with your own
-// app.use("/api/users", usersRoutes(db));
-app.use("/api/widgets", widgetsRoutes(db));
+// api database routes
 app.use("/api/resources", resourcesRoutes(db));
 app.use("/api/users", usersRoutes(db));
 app.use("/api/search", searchedResourcesRoutes(db));
 
+// route to create a new resource
 app.use("/create", createResourceRoutes(db));
+
+// route to the expanded resource
 app.use("/resource", resourceRoutes(db));
+
+// route to searched resources by category
 app.use("/search", searchRoutes(db));
 
 /* Route for /my-resources */
 app.use("/my-resources", myResourcesRoutes(db));
 
-// /dashboard
-// /users/:id/resources -- if I want to see the resources of a specific user
+// Route to dashboard page displaying all resources
 app.use("/home", homeRoutes(db));
 
-// Note: mount other resources here, using the same pattern above
 /* Route for /register aka sign up page */
 app.use("/register", registerRoutes(db));
 

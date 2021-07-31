@@ -1,5 +1,5 @@
 $(() => {
-
+  //HTML to render a dynamic resource using an imported resource object
   const createResource = (resource) => {
     const $resource = $(`
     <div class='resource-container' id='rc1'>
@@ -37,35 +37,37 @@ $(() => {
     return $resource;
   }
 
+  //GET request to back end saved resources
   $.get('/api/resources/saved')
     .then((resources) => {
-      renderSavedResources(resources);
+      renderSavedResources(resources); //renders all the Saved Resources from the database
     })
     .catch(err => {
       console.log('err:', err.message)
     })
 
   const renderSavedResources = (savedResources) => {
-    const $savedResourceContainer = $('#savedResources');
+    const $savedResourceContainer = $('#savedResources'); //connects the render function to the my-resources EJS container
 
-    savedResources.reverse().forEach(resource => {
-      $savedResourceContainer.append(createResource(resource));
+    savedResources.reverse().forEach(resource => { //reverses the resource order so newest resources are displayed first
+      $savedResourceContainer.append(createResource(resource)); //append the resource to the container
     })
   };
 
+  //GET request to back end liked resources
   $.get('/api/resources/liked')
     .then((likedResources) => {
-      renderLikedResources(likedResources);
+      renderLikedResources(likedResources); //renders all the Liked Resources from the database
     })
     .catch(err => {
       console.log('err:', err.message)
     })
 
   const renderLikedResources = (likedResources) => {
-    const $resourceContainer = $('#resources');
+    const $resourceContainer = $('#resources'); //connects the render function to the the my-resources EJS container
 
-    likedResources.reverse().forEach(resource => {
-      $resourceContainer.append(createResource(resource));
+    likedResources.reverse().forEach(resource => { //reverses the resource order so newest resources are displayed first
+      $resourceContainer.append(createResource(resource)); //append the resource to the container
     })
   }
 
