@@ -1,4 +1,3 @@
-
 $(() => {
 
   const createExpandedResource = (resource) => {
