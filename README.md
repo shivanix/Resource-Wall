@@ -52,6 +52,7 @@ reSource allows learners to save learning resources like tutorials, blogs and vi
 - node-sass-middleware
 - pg
 - pg-native
+- timeago.js
 
 
 ## Final Product
