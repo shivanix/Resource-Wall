@@ -21,7 +21,6 @@ module.exports = (db) => {
       `, [owner.id, resource.category, resource.title, resource.photo_url, resource.summary, resource.description, resource.tags[0], resource.tags[1], resource.tags[2], resource.resource_url])
     .then((data) => {
       const newResource = data.rows[0];
-      console.log("THIS IS NEW RESOURCE CREATED:  ", newResource)
 
       res.redirect(`/resource/${newResource.id}`);
       })
