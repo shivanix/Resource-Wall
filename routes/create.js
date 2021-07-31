@@ -8,13 +8,11 @@ module.exports = (db) => {
       username: user.username
     };
     res.render("create", templateVars);
-      })
+  })
 
   router.post("/", (req, res) => {
     const resource = req.body;
-    // console.log("RESOURCE BODY AKA REQ.BODY:  ", resource)
     const owner = req.session.user_id
-    // console.log("THIS IS THE OWNER.ID: ######", owner.id)
 
     db.query(`
       INSERT INTO resources(owner_id, category, title, thumbnail_photo_url, summary, description, tag_1, tag_2, tag_3, resource_url)
@@ -25,7 +23,6 @@ module.exports = (db) => {
       const newResource = data.rows[0];
       console.log("THIS IS NEW RESOURCE CREATED:  ", newResource)
 
-      // req.session.resource = newResource;
       res.redirect(`/resource/${newResource.id}`);
       })
     .catch((error) => {

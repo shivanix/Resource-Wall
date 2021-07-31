@@ -1,6 +1,5 @@
 const express = require('express');
 const router  = express.Router();
-// const bcrypt = require("bcrypt-pbkdf");
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
@@ -22,7 +21,7 @@ module.exports = (db) => {
       `, [email, password])
     .then((data) => {
       const user = data.rows[0];
-      // console.log("DATA ROW: ", user)
+
       if (!user) {
         return res.status(403).send(error.message);
       } else {

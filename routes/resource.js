@@ -50,18 +50,6 @@ module.exports = (db) => {
       })
   });
 
-  // /* So that logged in users can edit a created resource */
-  // router.post("/:id", (req, res) => {
-  //   const id = req.params.id;
-  //   const user = req.session.user_id;
-  //   const resource = req.session.resource;
-  //   const templateVars = {
-  //     username: user.username,
-  //     id: resource.id
-  //   };
-  //   res.render("resource", templateVars)
-  // });
-
   router.post("/:id/like", (req, res) => {
     const id = req.params.id;
     const user = req.session.user_id;

@@ -9,7 +9,6 @@ module.exports = (db) => {
     };
 
     res.render("home", templateVars);
-      })
-
+  })
   return router;
 };

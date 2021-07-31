@@ -4,7 +4,7 @@ const router  = express.Router();
 module.exports = (db) => {
   router.get("/", (req, res) => {
     res.render("register");
-      })
+  })
 
   router.post("/", (req, res) => {
     const user = req.body;
@@ -24,7 +24,6 @@ module.exports = (db) => {
     .then((result) => {
       const userData = result.rows[0];
 
-      //If user with same email or username was found
       if (result.rows.length > 0) {
         if (userData.email === user.email) {
           return res.status(400).send(`Email already exists. Please <a href="/register"> try again</a>!`);
@@ -32,7 +31,6 @@ module.exports = (db) => {
           return res.status(400).send(`Username already exists. Please <a href="/register"> try again</a>!`);
         }
       } else {
-      //If no user with same email or username was found
         createNewUser(user, req, res);
       }
     })
