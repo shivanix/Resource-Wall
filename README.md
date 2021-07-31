@@ -5,6 +5,20 @@
   reSource is a full stack web application built using Node, Express, jQuery, SASS, and PostgreSQL for DBMS.
 
 
+## What is reSource
+
+reSource allows learners to save learning resources like tutorials, blogs and videos in a central place that is publicly available to any user.
+
+- Users can save an external URL along with a title and description
+- Users can search for already-saved resources created by any user
+- Users can categorize any resource under a topic
+- Users can comment on any resource
+- Users can rate any resource
+- Users can like any resource
+- Users can view all their own and all liked resources on one page ("My resources")
+- Users can register, log in, and log out.
+
+
 ## Getting Started
 
 1. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
@@ -38,3 +52,15 @@
 - node-sass-middleware
 - pg
 - pg-native
+
+
+## Final Product
+
+!["Expanded resource page"](https://github.com/MitchWAldrich/Resource-Wall/blob/master/screenshots/expanded-resource-page.png?raw=true)
+
+!["My resources page"](https://github.com/MitchWAldrich/Resource-Wall/blob/master/screenshots/my-resources-page.png?raw=true)
+
+!["Search results page - Category: Education"](https://github.com/MitchWAldrich/Resource-Wall/blob/master/screenshots/search-results.png?raw=true)
+
+!["Create page"](https://github.com/MitchWAldrich/Resource-Wall/blob/master/screenshots/create-form.gif?raw=true)
+
