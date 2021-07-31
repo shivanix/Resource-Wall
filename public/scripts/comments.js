@@ -2,15 +2,13 @@ $(() => {
 
   let pathName = window.location.pathname;
   let resourceID = pathName.replace('/resource/', '')
-  console.log("helpppppppppppppp", resourceID);
-
 
   $.ajax({
     method: "GET",
     url: `/api/resources/${resourceID}/comments`
-  }).done((comments) => {
+  })
+  .done((comments) => {
 
-    console.log("users", comments);
     renderComments(comments);
   });
 
@@ -37,9 +35,7 @@ $(() => {
 
         .done((data)=>{
             $("#tx01").val('');//Clear text area
-              console.log("BIGggggggggggggggg");
 
-          console.log("Thissssssssssss", data);
             $('.comments').prepend(createCommentElement(data));
           });
 
@@ -52,10 +48,6 @@ $(() => {
 
 
 const createCommentElement = function(commentData) {
-
-// console.log("On page loaddddddddddddddd");
-// console.log("rrriogrigrigrigrgi", commentData);
-
 
 
   const htmlMarkup = ` <article class="comments-container">

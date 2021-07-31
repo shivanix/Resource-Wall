@@ -1,4 +1,4 @@
-console.log('hello')
+
 $(() => {
 
   const createExpandedResource = (resource) => {
@@ -46,7 +46,6 @@ $(() => {
 
   $.get('/api/resources/1')
     .then((resources) => {
-      console.log('resources', resources)
       renderExpandedResource(resources[0]);
     })
     .catch(err => {

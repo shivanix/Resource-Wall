@@ -4,14 +4,8 @@ const router  = express.Router();
 module.exports = (db) => {
   router.get("/", (req, res) => {
     res.render("register");
-      })
+  })
 
-  /* ERRORS:
-    If user already exists (username or email) -- ERROR
-    If input password does not match requirements (>= 8 characters) -- ERROR -- STRETCH
-    If email or password is empty -- ERROR
-    Else -- none of the errors happened, the details will be stored to users: email, username, password will be stored in the database
-  */
   router.post("/", (req, res) => {
     const user = req.body;
 
@@ -28,10 +22,8 @@ module.exports = (db) => {
     OR username = $2
     `, [user.email, user.username])
     .then((result) => {
-      console.log("Rows result: ",result.rows[0]);
       const userData = result.rows[0];
 
-      //If user with same email or username was found
       if (result.rows.length > 0) {
         if (userData.email === user.email) {
           return res.status(400).send(`Email already exists. Please <a href="/register"> try again</a>!`);
@@ -39,7 +31,6 @@ module.exports = (db) => {
           return res.status(400).send(`Username already exists. Please <a href="/register"> try again</a>!`);
         }
       } else {
-      //If no user with same email or username was found
         createNewUser(user, req, res);
       }
     })
@@ -57,12 +48,10 @@ module.exports = (db) => {
         `, [user.email, user.username, user.password])
       .then((data) => {
         const newUser = data.rows[0];
-        // console.log("THIS IS NEWUSER: ". newUser) // getting undefined here
         if (!newUser) {
           res.send("Error: ", error.message);
         } else {
           req.session.user_id = newUser;
-          // console.log("##############", newUser)
           res.redirect("/home");
         }
       })

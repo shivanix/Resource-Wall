@@ -10,7 +10,6 @@ $(() => {
       url: `/resource/${resourceID}/ratings`,
     })
     .done((data) => {
-      console.log("Data::::average rating....", data[0].average_rating);
 
       const averageRating = data[0].average_rating;
 
@@ -18,11 +17,9 @@ $(() => {
         const filledInStars = averageRatingStars.slice(5 - averageRating);
         filledInStars.removeClass('far').addClass('fas');
 
-        //
         const emptyStars = averageRatingStars.slice(0, 5 - averageRating);
         emptyStars.removeClass('fas').addClass('far');
       }
-
 
     });
   }
@@ -47,7 +44,6 @@ function executeRating(stars, result) {
 
          let rating = i + 1;
 
-         console.log("IIIIIIIII", i);
          if (star.className.indexOf(starClassUnactive) !== -1) {
 
             printRatingResult(result, i + 1);
@@ -57,9 +53,6 @@ function executeRating(stars, result) {
             printRatingResult(result, i);
             for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
          }
-         console.log("ratinggggggggg", rating);
-         let pathName = window.location.pathname;
-         let resourceID = pathName.replace('/resource/', '')
 
          $.ajax({
           method: "POST",
@@ -68,17 +61,13 @@ function executeRating(stars, result) {
         }).done(() => {
           updateAverageRating();
         });
-
-
       };
    });
-   console.log(stars.length);
 }
 
 function printRatingResult(result, num = 0) {
    result.textContent = `${num}/5`;
 }
 executeRating(ratingStars, ratingResult);
-
 
 })
