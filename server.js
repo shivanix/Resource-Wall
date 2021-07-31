@@ -41,7 +41,6 @@ app.use(cookieSession({
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
-const widgetsRoutes = require("./routes/widgets");
 
 const createResourceRoutes = require("./routes/create");
 const resourceRoutes = require("./routes/resource");
@@ -60,7 +59,6 @@ const searchedResourcesRoutes = require("./routes/searched-router");
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // app.use("/api/users", usersRoutes(db));
-app.use("/api/widgets", widgetsRoutes(db));
 app.use("/api/resources", resourcesRoutes(db));
 app.use("/api/users", usersRoutes(db));
 app.use("/api/search", searchedResourcesRoutes(db));
