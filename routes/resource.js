@@ -99,10 +99,6 @@ module.exports = (db) => {
 
   router.get("/:id/ratings", (req, res) =>{
     const id = req.params.id;
-    console.log("Backend got hittttttt");
-    console.log("What do you mean by this%%%% id:", id);
-    console.log("Whats the body again^^^", req.body);
-    // console.log("reqqqqqqq", req);
 
     db.query(`
     SELECT resources.*, ROUND(AVG(ratings.rating), 0) AS average_rating
@@ -132,10 +128,6 @@ module.exports = (db) => {
     const user = req.session.user_id;
     const rating = req.body.rating;
 
-    console.log("routeeee", id, user);
-    console.log("THIS IS THE RAINGTGGGS STARRR: ", rating)
-    console.log(req.body);
-
     db.query(`SELECT rating
     FROM ratings
     WHERE user_id = $1
@@ -144,7 +136,6 @@ module.exports = (db) => {
     .then((data) => {
       if(!data.rows[0]){
 
-        console.log("Create a new ratingggggggggg");
         db.query(`
         INSERT INTO ratings(rating, resource_id, user_id)
         VALUES ($1, $2, $3)
@@ -159,7 +150,6 @@ module.exports = (db) => {
       })
     }else{
 
-      console.log("Updatinggggg ratingggggg");
       db.query(`
       UPDATE ratings
       SET rating = $1

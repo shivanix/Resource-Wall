@@ -62,21 +62,10 @@ module.exports = (db) => {
       });
   });
 
-/*
-//router: /resource/id/comments
-//extract the id value
-//create query t pull comments of that resource/:id from the
-// db--join q bet resources users comments
-//return the result in json
-*/
 
 router.get("/:id/comments", (req, res) =>{
 const id = req.params.id;
 
-// clog("Backend hittttttt");
-// clog("idddd", id);
-// clg("bodyyyyy", req.body);
-// clogg("reqqqqqqq", req);
 
 db.query(`
 SELECT comments.*,users.username
@@ -101,20 +90,10 @@ ORDER BY comments.created_at ASC;`, [id])
   });
 
 
-/*
-// console.log("Before insert");
-//extract id value
-// extract the comment from the form
-// insert q into saved comments in db associated with that id
-//return username of the user that created the comment
-*/
-
-
   router.post("/comments", (req, res) => {
   const id = req.body.resource_id;
   const userID = req.session.user_id.id;
   const comment = req.body.comment;
-  // const timestamp = new Date(Date.now()).toISOString().slice(0, 19).replace('T', ' ');
 
   const timestamp = moment().format('YYYY-MM-DD HH:mm:ss');
 
@@ -132,7 +111,6 @@ ORDER BY comments.created_at ASC;`, [id])
           newComment['username'] = result.rows[0].username;
           newComment.created_at = timestamp;
 
-          // console.log("RESULTS ROW CREATED AT", result.rows[0])
           res.send(newComment);
         })
 
