@@ -22,7 +22,6 @@ module.exports = (db) => {
     OR username = $2
     `, [user.email, user.username])
     .then((result) => {
-      console.log("Rows result: ",result.rows[0]);
       const userData = result.rows[0];
 
       //If user with same email or username was found
