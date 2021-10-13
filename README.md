@@ -2,7 +2,7 @@
 
 ### Midterm Project by Mitch Aldrich, Shivani Konuguru, Kleir Miranda
   
-  reSource is a full stack web application built using Node, Express, jQuery, SASS, and PostgreSQL for DBMS.
+  reSource is a full stack web application built using Node.js, Express, jQuery, SASS, and PostgreSQL for DBMS.
 
 
 ## What is reSource
